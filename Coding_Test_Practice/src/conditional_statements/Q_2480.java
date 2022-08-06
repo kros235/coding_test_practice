@@ -1,6 +1,9 @@
+package conditional_statements;
+
 import java.util.Scanner;
 
-public class Main {
+public class Q_2480 {
+
     public static int find_max_value(int[] dice) {
 
         int max_value = -999;
