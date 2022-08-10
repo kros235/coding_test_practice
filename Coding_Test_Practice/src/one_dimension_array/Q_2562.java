@@ -1,7 +1,9 @@
+package one_dimension_array;
 import java.util.Scanner;
 
-public class Main {
+public class Q_2562 {
     public static void main(String args[]) {
+
 
         int max = -1, max_index = 0;
         int[] num = new int[9];
