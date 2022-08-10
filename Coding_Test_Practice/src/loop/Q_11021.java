@@ -1,9 +1,10 @@
+package loop;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Q_11021 {
     public static void main(String args[]) throws IOException {
-
 
         int round = 0 ;
         String input;
