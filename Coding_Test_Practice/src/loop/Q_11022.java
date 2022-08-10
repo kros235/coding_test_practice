@@ -1,9 +1,11 @@
+package loop;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Main {
+public class Q_11022 {
     public static void main(String args[]) throws IOException {
-
         int round;
         String input;
         ArrayList<Integer> digits = new ArrayList<>();
@@ -17,7 +19,7 @@ public class Main {
             input = br.readLine();
             String[] numbers = input.split(" ");
             if(Integer.parseInt(numbers[0]) < 0 || Integer.parseInt(numbers[0]) > 10
-                || Integer.parseInt(numbers[1]) < 0 || Integer.parseInt(numbers[1]) > 10) continue;
+                    || Integer.parseInt(numbers[1]) < 0 || Integer.parseInt(numbers[1]) > 10) continue;
             else{
                 digits.add(Integer.parseInt(numbers[0]));
                 digits.add(Integer.parseInt(numbers[1]));
@@ -32,6 +34,5 @@ public class Main {
         }
         bw.flush();
         bw.close();
-
     }
 }
