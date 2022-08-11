@@ -4,34 +4,50 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String args[]) throws IOException {
 
-        int round;
-        String input;
-        ArrayList<Integer> digits = new ArrayList<>();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        String input;
+        String[] input_numbers;
+        int round, compare_num;
+        ArrayList<Integer> digits = new ArrayList<>();
+
         input = br.readLine();
-        round = Integer.parseInt(input);
+        input_numbers = input.split(" ");
+        round = Integer.parseInt( input_numbers[0] );
+        compare_num = Integer.parseInt( input_numbers[1] );
 
-        for( int i = 0 ; i < round ; i++){
+
+
+
+
+        if(round < 1 || round > 10000
+            || compare_num < 1 || compare_num > 10000){}
+        else{
+
             input = br.readLine();
-            String[] numbers = input.split(" ");
-            if(Integer.parseInt(numbers[0]) < 0 || Integer.parseInt(numbers[0]) > 10
-                || Integer.parseInt(numbers[1]) < 0 || Integer.parseInt(numbers[1]) > 10) continue;
-            else{
-                digits.add(Integer.parseInt(numbers[0]));
-                digits.add(Integer.parseInt(numbers[1]));
+
+            System.out.println("input = " + input);
+            //String[] number_lists = input.split(" ");
+
+/*
+            System.out.println("number_lists.length = " + number_lists.length);
+            System.out.println("number_lists[0] = " + number_lists[0]);
+
+            for (int i = 0; i < number_lists.length ; i ++)
+                if(Integer.parseInt( number_lists[i] ) < compare_num )
+                    digits.add( Integer.parseInt( number_lists[i] ) );
+
+            for (int i = 0; i < digits.size() ; i ++){
+                bw.write( String.valueOf( digits.get(i) ) );
+                if( i!= (digits.size()-1) )
+                    bw.write(" ");
             }
-        }
+            bw.flush();
+            bw.close();*/
 
-        int counter = 1;
-        for(int i = 0 ; i<digits.size(); i+=2){
-            bw.write("Case #" + counter++ + ": " + digits.get(i) + " + " + digits.get(i+1)
-                    + " = " + (digits.get(i) +  digits.get(i+1)) );
-            bw.newLine();
-        }
-        bw.flush();
-        bw.close();
 
+
+        }
     }
 }
