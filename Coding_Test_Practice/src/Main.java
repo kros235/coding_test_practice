@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String args[]) throws IOException {
@@ -8,32 +7,25 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String input;
-        int remainder, counter = 0;
+
+
+        String score_list_amount = br.readLine();
         boolean valid_checker = true;
+        int continuous_counter;
 
-        int[] result = new int[42];
-        Arrays.fill(result, 0);
-
-        for (int i = 0; i < 10; i++) {
-            input = br.readLine();
-            if (Integer.parseInt(input) < 0 || Integer.parseInt(input) > 1000) {
+        for(int i = 0 ; i < Integer.parseInt(score_list_amount) ; i++){
+            String result = br.readLine();
+            if(result.length() < 0 || result.length() > 80)
                 valid_checker = false;
-                continue;
+            else{
+                continuous_counter = 0;
+
             }
-            remainder = Integer.parseInt(input) % 42;
-            result[remainder]++;
         }
 
-        if (valid_checker != false) {
-            for (int i = 0; i < 42; i++)
-                if (result[i] > 0)
-                    counter++;
-            bw.write(String.valueOf(counter));
-        }
 
-        br.close();
         bw.flush();
+        br.close();
         bw.close();
     }
 }
