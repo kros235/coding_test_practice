@@ -1,9 +1,11 @@
+package one_dimension_array;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Main {
+public class Q_4344 {
     public static void main(String args[]) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
