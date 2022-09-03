@@ -1,7 +1,9 @@
+package functions;
+
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
+public class Q_15596 {
     public static long sum(int[] a) {
         long ans = 0L;
 
