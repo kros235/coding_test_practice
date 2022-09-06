@@ -1,8 +1,9 @@
+package functions;
+
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
-
+public class Q_4673 {
     static final int MAX_BOUNDARY = 10000;
 
     public static int[] get_self_numbers(int[] record_table) {
