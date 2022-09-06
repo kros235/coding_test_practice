@@ -1,9 +1,9 @@
+package functions;
+
 import java.io.*;
-import java.nio.Buffer;
 import java.util.Arrays;
 
-public class Main {
-
+public class Q_1065 {
     public static int get_han_number_counts(int max_number) {
 
         int count = 0;
