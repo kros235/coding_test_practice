@@ -1,8 +1,9 @@
+package string;
+
 import java.io.*;
-import java.nio.Buffer;
 import java.util.Arrays;
 
-public class Main {
+public class Q_10809 {
 
     public static int[] get_alphabet_encounter_counts(String input) {
 
@@ -41,4 +42,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
