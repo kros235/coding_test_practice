@@ -1,19 +1,67 @@
 import java.io.*;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
-    public static String generate_new_line(int repeat_count, String input_line) {
+    public static String convert_into_non_captial_line(String input_line) {
 
         String new_line = "";
 
-        for ( int i = 0 ; i < input_line.length() ; i++ ){
+        for (int i = 0; i < input_line.length(); i++) {
             char partial = input_line.charAt(i);
 
-            for ( int j = 0; j < repeat_count ; j++ )
+            if ((int) partial >= 65 && (int) partial <= 90)
+                new_line += (char) (partial + 32);
+            else
                 new_line += partial;
         }
         return new_line;
+    }
+
+    public static int[] count_duplicated_letter(String input_line) {
+
+        String new_line = "";
+        int[] alphabet_dashboard = new int[26];
+
+        Arrays.fill(alphabet_dashboard, -1);
+
+        for (int i = 0; i < input_line.length(); i++) {
+
+            char partial = input_line.charAt(i);
+            int index = (int) partial;
+
+            if (alphabet_dashboard[(index - 97)] != -1) continue;
+            else {
+                int count = 0;
+                for (int j = i; j < input_line.length(); j++)
+                    if (partial == input_line.charAt(j)) count++;
+                alphabet_dashboard[(index - 97)] = count;
+            }
+        }
+        return alphabet_dashboard;
+    }
+
+    public static String find_max_duplicates(int[] alphabet_dashboard) {
+
+        int max = -999;
+        int max_index = -1;
+        boolean max_duplicate_encounters = false;
+
+        for (int i = 0; i < alphabet_dashboard.length; i++) {
+            if (max < alphabet_dashboard[i]) {
+                max = alphabet_dashboard[i];
+                max_index = i;
+            }
+        }
+
+        for (int i = 0; i < alphabet_dashboard.length; i++) {
+            if (i != max_index && max == alphabet_dashboard[i])
+                max_duplicate_encounters = true;
+        }
+
+        if (max_duplicate_encounters != true)
+            return "" + (char) (max_index + 65);
+        return "?";
     }
 
     public static void main(String args[]) throws IOException {
@@ -22,23 +70,29 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String input = br.readLine();
-        int round_count = Integer.parseInt(input);
 
-        ArrayList<String> new_line_output = new ArrayList<>();
 
-        if (round_count < 1 || round_count > 1000) {
+        if (input.length() > 1000000) {
         } else {
-            for (int i = 0; i < round_count; i++){
-                input = br.readLine();
-                String[] contents = input.split(" ");
-                new_line_output.add( generate_new_line(Integer.parseInt( contents[0]) , contents[1]) );
-            }
 
-            for (int i = 0; i < new_line_output.size(); i++)
-                bw.write(new_line_output.get(i) + "\n");
+            String minimalized_line = convert_into_non_captial_line(input);
+            int[] alphabet_dashboard = count_duplicated_letter(minimalized_line);
+            String result = find_max_duplicates(alphabet_dashboard);
+
+            bw.write(result);
             bw.flush();
         }
         br.close();
         bw.close();
     }
 }
+
+/*
+ A 		Z
+65		90
+
+	32
+
+  a		z
+97		122
+ */
