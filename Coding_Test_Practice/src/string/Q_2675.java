@@ -1,7 +1,9 @@
+package string;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Q_2675 {
 
     public static String generate_new_line(int repeat_count, String input_line) {
 
@@ -41,4 +43,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
