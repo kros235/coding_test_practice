@@ -1,6 +1,9 @@
-import java.io.*;
+package string;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+
+public class Q_1152 {
 
     public static String[] tokenize_words(String input_line) {
 
@@ -35,4 +38,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
