@@ -1,7 +1,10 @@
+package string;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
+public class Q_1157 {
 
     public static char convert_into_non_captial(char input) {
         char new_char;
@@ -82,14 +85,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-/*
- A 		Z
-65		90
-
-	32
-
-  a		z
-97		122
- */
