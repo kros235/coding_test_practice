@@ -1,6 +1,8 @@
+package string;
+
 import java.io.*;
 
-public class Main {
+public class Q_5622 {
 
     public static int find_time_consumption(char input) {
 
@@ -58,4 +60,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
