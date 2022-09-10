@@ -1,38 +1,27 @@
 import java.io.*;
 
 public class Main {
+    static StringBuilder input;
 
-    public static int find_time_consumption(char input) {
+    public static int find_croatian_word_count(String compare_string) {
 
-        if ( input == 'A' || input == 'B' || input == 'C')
-            return 3;
+        System.out.println("compare_String = " + compare_string);
+        // 일단 감지되니까 들어옴
+        int count = 0;
 
-        else if ( input == 'D' || input == 'E' || input == 'F')
-            return 4;
+        while(input.indexOf(compare_string) == -1) {
 
-        else if ( input == 'G' || input == 'H' || input == 'I')
-            return 5;
 
-        else if ( input == 'J' || input == 'K' || input == 'L')
-            return 6;
+            System.out.println("input.indexOf(compare_string) = " + input.indexOf(compare_string));
+            System.out.println("compare_string.length() = " + compare_string.length());
+            System.out.println("input = " + input + ", input.length = " + input.length());
+            input.replace(input.indexOf(compare_string), compare_string.length(), "_");
 
-        else if ( input == 'M' || input == 'N' || input == 'O')
-            return 7;
+            count++;
+            System.out.println("compare_String = " + compare_string + ", input_string = " + input + ", count = " + count + ", input.length = " + input.length());
+        }
 
-        else if ( input == 'P' || input == 'Q' || input == 'R' || input == 'S')
-            return 8;
-
-        else if ( input == 'T' || input == 'U' || input == 'V')
-            return 9;
-
-        else if ( input == 'W' || input == 'X' || input == 'Y' || input == 'Z')
-            return 10;
-
-        else if ( input == '+' || input == '-' || input == '*' || input == '/' || input == '#')
-            return 10;
-
-        else    //  when user pressed '1'
-            return 2;
+        return count;
     }
 
     public static void main(String args[]) throws IOException {
@@ -40,19 +29,28 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringBuilder input = new StringBuilder(br.readLine());
-
-        int total_time_consumption = 0;
+        input = new StringBuilder(br.readLine());
 
 
-        if (input.length() < 2 || input.length() > 15) {
+        String[] alphabet_table = {"dz=", "c=", "c-", "d-", "lj", "nj", "s=", "z="};
+
+        int total_Croatian_alphabet_count = 0;
+
+
+        if (input.length() < 0 || input.length() > 100) {
         } else {
 
-            for (int i = 0; i < input.length(); i++)
-                total_time_consumption += find_time_consumption(input.charAt(i));
+            for (int i = 0; i < alphabet_table.length; i++) {
+                total_Croatian_alphabet_count += find_croatian_word_count(alphabet_table[i]);
+            }
+
+            for (int i = 0; i < input.length(); i++) {
+                if (!String.valueOf(input.charAt(i)).equals("_"))
+                    total_Croatian_alphabet_count++;
+            }
 
 
-            bw.write(String.valueOf(total_time_consumption));
+            bw.write(String.valueOf(total_Croatian_alphabet_count));
             bw.flush();
         }
         br.close();
