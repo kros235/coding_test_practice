@@ -1,8 +1,11 @@
+package string;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
+public class Q_1316 {
+
     public static StringBuilder remove_consequtive_word(StringBuilder input_word) {
         StringBuilder new_words = new StringBuilder(input_word.length());
         new_words.append(input_word);
@@ -75,4 +78,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
