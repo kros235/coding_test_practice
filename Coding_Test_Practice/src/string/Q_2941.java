@@ -1,6 +1,10 @@
-import java.io.*;
+package string;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+
+public class Q_2941 {
+
     static StringBuilder input;
 
     public static int find_croatian_word_count(String compare_string) {
