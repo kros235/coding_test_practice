@@ -1,9 +1,10 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_2741 {
 
     public static void main(String args[]) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -13,12 +14,14 @@ public class Main {
         if (round < 0 || round > 100000) {
         } else {
 
-            for ( int i = 1 ; i <= round ; i++) {
+            for (int i = 1; i <= round; i++) {
                 bw.write(String.valueOf(i) + "\n");
             }
         }
         bw.flush();
         br.close();
         bw.close();
+
     }
+
 }
