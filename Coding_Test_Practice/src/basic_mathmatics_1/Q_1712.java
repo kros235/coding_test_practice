@@ -1,7 +1,8 @@
+package basic_mathmatics_1;
+
 import java.io.*;
 
-public class Main {
-
+public class Q_1712 {
     public static long find_profit_point(long fixed_budget, long manufacturing_budget, long sales_price) {
         long investments, differ, decrease_amount;
         if (manufacturing_budget >= sales_price)
