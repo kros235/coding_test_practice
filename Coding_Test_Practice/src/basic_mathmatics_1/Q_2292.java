@@ -1,8 +1,9 @@
+package basic_mathmatics_1;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_2292 {
     public static ArrayList<Long> generate_boundaries(long a) {
 
         ArrayList<Long> boundaries = new ArrayList<>();
