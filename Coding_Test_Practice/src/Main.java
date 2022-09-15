@@ -62,7 +62,7 @@ public class Main {
 
         if ( area_index  == 0 )
             return 1 + "/" + 1;
-        else if ( area_index % 2 == 0 )
+        else if ( area_index % 2 == 1 )
             return ( 1 + (remainder-1) ) + "/" + ( (area_index+1) - (remainder-1) );
         else
             return ( (area_index+1) - (remainder-1) ) + "/" + ( 1 + (remainder-1) );
