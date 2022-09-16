@@ -1,7 +1,8 @@
+package basic_mathmatics_1;
+
 import java.io.*;
 
-public class Main {
-
+public class Q_2869_re {
     public static long calculate_days( long arise, long fall, long height){
         long day = (height - fall) / (arise - fall);
 
@@ -25,7 +26,7 @@ public class Main {
         long height = Long.parseLong( parsed_iput[2]);
 
         if ( arise < 0 || fall < 0 || height < 0
-            || arise > 1000000000 || fall > 1000000000 || height > 1000000000){}
+                || arise > 1000000000 || fall > 1000000000 || height > 1000000000){}
         else {
             long result_day = calculate_days(arise, fall, height);
             bw.write( String.valueOf( result_day ) );
