@@ -1,6 +1,9 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_10872 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -13,8 +16,8 @@ public class Main {
 
         if ( digit < 0 ||  digit > 12){}
         else {
-           for ( int i  = 1 ; i <= digit ; i++)
-               result *= i;
+            for ( int i  = 1 ; i <= digit ; i++)
+                result *= i;
             bw.write( String.valueOf( result ) );
         }
         bw.flush();
@@ -22,4 +25,5 @@ public class Main {
         bw.close();
 
     }
+
 }
