@@ -1,6 +1,8 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_1264 {
 
     public static int get_vowel_count(String input){
         int count = 0;
@@ -45,4 +47,5 @@ public class Main {
         bw.close();
 
     }
+
 }
