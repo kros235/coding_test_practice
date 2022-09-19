@@ -1,8 +1,10 @@
+package basic_mathmatics_1;
+
 import java.io.*;
+import java.math.BigInteger;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_10250 {
     public static String get_room_no(int height, int width, int customer) {
 
         int room_level, room_column;
