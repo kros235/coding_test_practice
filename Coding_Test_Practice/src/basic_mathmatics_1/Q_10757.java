@@ -1,8 +1,9 @@
+package basic_mathmatics_1;
+
 import java.io.*;
 import java.math.BigInteger;
 
-public class Main {
-
+public class Q_10757 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
