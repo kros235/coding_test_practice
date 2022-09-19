@@ -1,7 +1,6 @@
-package basic_mathmatics_1;
+package basic_mathematics_1;
 
 import java.io.*;
-import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Q_10250 {
