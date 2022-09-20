@@ -1,8 +1,9 @@
+package basic_mathematics_1;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_2775 {
     public static int make_apt_table(int level, int room_no) {
 
         int[][] num = new int[level + 1][room_no];
