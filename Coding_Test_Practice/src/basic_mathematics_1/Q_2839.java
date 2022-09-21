@@ -1,8 +1,9 @@
+package basic_mathematics_1;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_2839 {
     public static int calculate_sacks(int sugar_amount) {
 
         int result = -1;
@@ -27,7 +28,7 @@ public class Main {
                 int remain_amount = sugar_amount - (5 * i);
                 if( remain_amount % 3 == 0){
                     result = i + (remain_amount / 3);
-                     return result;
+                    return result;
                 }
             }
 
