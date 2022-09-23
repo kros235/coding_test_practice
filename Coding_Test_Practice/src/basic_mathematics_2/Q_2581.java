@@ -1,8 +1,9 @@
+package basic_mathematics_2;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_2581 {
     public static int check_prime_number(int number) {
 
         int count = 0;
