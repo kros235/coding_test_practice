@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Q_1212 {
 
     static int transform_count = 0;
 
@@ -50,4 +52,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
