@@ -1,8 +1,9 @@
+package basic_mathematics_2;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
-
+public class Q_11653 {
     public static long prime_factorization(long digit) {
 
         for ( int i = 2 ; i <= digit ; i++){
