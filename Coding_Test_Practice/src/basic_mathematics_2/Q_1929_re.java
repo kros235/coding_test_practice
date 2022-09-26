@@ -1,10 +1,13 @@
+package basic_mathematics_2;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
-
+public class Q_1929_re {
     static boolean[] prime_checker;
+
+    // 에라토스테네스의 체 알고리즘 ( Sieve of Eratosthenes Algorithm )
 
     public static void find_prime_numbers(int min_range, int max_range) {
 
@@ -33,7 +36,7 @@ public class Main {
                         prime_checker[j] = false;
                         //System.out.println(" j = " + j + " deleted by " + i);
                     } //else
-                        //System.out.println(" j = " + j + ", i = " + i);
+                    //System.out.println(" j = " + j + ", i = " + i);
                 }
             }
 
