@@ -1,9 +1,10 @@
+package basic_mathematics_2;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
-
+public class Q_4938 {
     static boolean[] table_list;
 
     public static void check_prime_numbers(int max_range){
