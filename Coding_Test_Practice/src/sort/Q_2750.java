@@ -1,26 +1,21 @@
+package sort;
+
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
-
-
+public class Q_2750 {
 
     public static int[] sort_list(int[] inputs){
 
         Arrays.sort(inputs);
-
         return inputs;
 
     }
-
-
 
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-
 
         int rounds      =   Integer.parseInt( br.readLine() );
 
