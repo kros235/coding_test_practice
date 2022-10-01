@@ -1,8 +1,9 @@
+package sort;
+
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
-
+public class Q_25305 {
 
     public static int[] sort_list(int[] inputs) {
 
