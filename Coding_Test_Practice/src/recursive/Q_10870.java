@@ -1,8 +1,10 @@
+package recursive;
+
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Main {
+public class Q_10870 {
+
 
     static ArrayList<Integer> fibonacci = new ArrayList<>();
 
@@ -42,4 +44,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
