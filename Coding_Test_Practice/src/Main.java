@@ -98,56 +98,57 @@ public class Main {
                 return inputs[1];
             }
         }
-
-
-        public static int get_median (Object[]inputs){
-
-            return (int) inputs[inputs.length / 2];
-
-        }
-
-        public static int get_range (Object[]inputs){
-
-            return ((int) inputs[inputs.length - 1] - (int) inputs[0]);
-
-        }
-
-
-        public static void main (String args[]) throws IOException {
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-
-            int round = Integer.parseInt(br.readLine());
-            ArrayList<Integer> digits = new ArrayList<>();
-
-
-            if (round < 1 || round > 500000 || round % 2 == 0) {
-            } else {
-
-
-                for (int i = 0; i < round; i++) {
-                    int temp = Integer.parseInt(br.readLine());
-                    if (Math.abs(temp) <= 4000)
-                        digits.add(temp);
-                }
-
-                Object[] inputs = digits.toArray();
-                Arrays.sort(inputs);
-
-
-                bw.write(String.valueOf(String.valueOf(get_arithematic_average(inputs))) + "\n");
-
-                bw.write(String.valueOf(String.valueOf(get_median(inputs))) + "\n");
-
-                bw.write(String.valueOf(String.valueOf(get_the_most_frequent_values(inputs))) + "\n");
-
-                bw.write(String.valueOf(String.valueOf(get_range(inputs))) + "\n");
-
-            }
-            bw.flush();
-            br.close();
-            bw.close();
-        }
     }
+
+
+    public static int get_median (Object[]inputs){
+
+        return (int) inputs[inputs.length / 2];
+
+    }
+
+    public static int get_range (Object[]inputs){
+
+        return ((int) inputs[inputs.length - 1] - (int) inputs[0]);
+
+    }
+
+
+    public static void main (String args[]) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+
+        int round = Integer.parseInt(br.readLine());
+        ArrayList<Integer> digits = new ArrayList<>();
+
+
+        if (round < 1 || round > 500000 || round % 2 == 0) {
+        } else {
+
+
+            for (int i = 0; i < round; i++) {
+                int temp = Integer.parseInt(br.readLine());
+                if (Math.abs(temp) <= 4000)
+                    digits.add(temp);
+            }
+
+            Object[] inputs = digits.toArray();
+            Arrays.sort(inputs);
+
+
+            bw.write(String.valueOf(String.valueOf(get_arithematic_average(inputs))) + "\n");
+
+            bw.write(String.valueOf(String.valueOf(get_median(inputs))) + "\n");
+
+            bw.write(String.valueOf(String.valueOf(get_the_most_frequent_values(inputs))) + "\n");
+
+            bw.write(String.valueOf(String.valueOf(get_range(inputs))) + "\n");
+
+        }
+        bw.flush();
+        br.close();
+        bw.close();
+    }
+}
