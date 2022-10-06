@@ -1,6 +1,9 @@
-import java.io.*;
+package brute_force;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+
+public class Q_2231 {
 
     public static int get_each_digit_sum(int digit) {
 
