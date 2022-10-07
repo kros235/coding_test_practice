@@ -1,8 +1,10 @@
+package brute_force;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Main {
+public class Q_7568 {
 
     static ArrayList<Integer> weight_list  =   new ArrayList<>();
     static ArrayList<Integer> height_list  =   new ArrayList<>();
@@ -35,7 +37,7 @@ public class Main {
                 int height = Integer.parseInt( input[1] );
 
                 if ( weight < 10 || weight > 200
-                    || height < 10 || height > 200){}
+                        || height < 10 || height > 200){}
                 else {
                     weight_list.add( weight );
                     height_list.add( height );
