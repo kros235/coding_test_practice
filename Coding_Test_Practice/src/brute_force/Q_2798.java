@@ -1,7 +1,9 @@
+package brute_force;
+
 import java.io.*;
 import java.util.Arrays;
 
-public class Main {
+public class Q_2798 {
 
     public static int get_max_approximate_num(int[] card_numbers, int target_number) {
 
