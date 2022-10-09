@@ -1,19 +1,35 @@
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
+    public static String get_remained_missing_coodrinate(int[] x_coordinate, int[] y_coordinate) {
 
-    static ArrayList<Integer> weight_list  =   new ArrayList<>();
-    static ArrayList<Integer> height_list  =   new ArrayList<>();
+        int x = 0, y = 0;
 
-    public static int get_rank(int amount, int weight, int height) {
+        for ( int i = 0 ; i < 3 ; i++ ) {
+            if ( x_coordinate[i] == x_coordinate[ i+1 ] ) {
+                x = x_coordinate[i + 2];
+                break;
+            }
+            else {
+                x = x_coordinate[i];
+                break;
+            }
+        }
 
-        int count = 1;
-        for (int i = 0 ; i < amount ; i++)
-            if ( weight_list.get(i) > weight && height_list.get(i) > height )
-                count ++;
-        return count;
+        for ( int i = 0 ; i < 3 ; i++ ) {
+            if (y_coordinate[i] == y_coordinate[i + 1]) {
+                y = y_coordinate[i + 2];
+                break;
+            } else {
+                y = y_coordinate[i];
+                break;
+            }
+        }
+
+        return x + " " + y;
     }
 
     public static void main(String args[]) throws IOException {
@@ -21,35 +37,29 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        int[] x_coordinate = new int[3];
+        int[] y_coordinate = new int[3];
 
-        int amount = Integer.parseInt(br.readLine());
+       for ( int i = 0 ; i < 3 ; i++ ){
+           String[] coordinate = br.readLine().split(" ");
+           int x    =   Integer.parseInt( coordinate[0] );
+           int y    =   Integer.parseInt( coordinate[1] );
 
-        ArrayList<Integer> rank_list    =   new ArrayList<>();
+           if ( x < 1 && x > 1000
+               || y < 1 && y > 1000){}
+           else{
+                x_coordinate[i] = x;
+                y_coordinate[i] = y;
+           }
+       }
 
-        if (amount < 2 || amount > 50){
-        } else {
+       Arrays.sort( x_coordinate );
+       Arrays.sort( y_coordinate );
 
-            for (int i = 0 ; i < amount ; i++) {
-                String[] input = br.readLine().split(" ");
-                int weight = Integer.parseInt( input[0] );
-                int height = Integer.parseInt( input[1] );
+       String result = get_remained_missing_coodrinate ( x_coordinate, y_coordinate);
 
-                if ( weight < 10 || weight > 200
-                    || height < 10 || height > 200){}
-                else {
-                    weight_list.add( weight );
-                    height_list.add( height );
-                }
-            }
+       bw.write( result );
 
-
-            for (int i = 0 ; i < amount ; i++)
-                rank_list.add( get_rank ( amount, weight_list.get(i), height_list.get(i) ) );
-
-            for (int i = 0 ; i < amount ; i++)
-                bw.write(String.valueOf( rank_list.get(i) ) + " ");
-
-        }
         bw.flush();
         br.close();
         bw.close();
