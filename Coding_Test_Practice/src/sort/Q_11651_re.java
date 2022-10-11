@@ -1,10 +1,10 @@
+package sort;
+
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_11651_re {
 
     public static void main(String args[]) throws IOException {
 
