@@ -2,6 +2,7 @@ import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -13,27 +14,27 @@ public class Main {
 
         int amount = Integer.parseInt( br.readLine() );
 
-        int [][] coordinate_list = new int[amount][2];
+        String[] list = new String[amount];
+        for ( int i = 0 ; i < amount ; i++ )
+            list[i] = br.readLine();
 
-        StringTokenizer st;
-        for ( int i = 0 ; i < amount ; i++ ){
-            st = new StringTokenizer( br.readLine() );
-            coordinate_list[i][0]   =   Integer.parseInt( st.nextToken() );
-            coordinate_list[i][1]   =   Integer.parseInt( st.nextToken() );
-        }
-
-        Arrays.sort(coordinate_list , (e1, e2) -> {
-            if (e1[1] == e2[1]){
-                return e1[0] - e2[0];
+        Arrays.sort(list, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (o1.length() == o2.length()){
+                    return o1.compareTo(o2);
+                }
+                else
+                    return o1.length() - o2.length();
             }
-            else
-                return e1[1] - e2[1];
         });
 
-        StringBuilder sb = new StringBuilder();
-        for ( int i = 0 ; i < amount ; i++)
-            sb.append(coordinate_list[i][0] + " " + coordinate_list[i][1] + "\n");
-        bw.write( String.valueOf(sb) );
+        bw.write ( list[0] + "\n");
+        for ( int i = 1 ; i < list.length ; i++ )
+            if ( !list[i-1].equals(list[i]) )
+                bw.write ( list[i] + "\n");
+
+
         bw.flush();
         br.close();
         bw.close();
