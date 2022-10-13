@@ -2,39 +2,38 @@ package sort;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Q_1181_re {
 
-    public static int[] sort_list(int[] inputs){
-        Arrays.sort(inputs);
-        return inputs;
-    }
-
-    public static void main(String args[]) throws IOException {
-
+    public static void main(String args[]) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int rounds      =   Integer.parseInt( br.readLine() );
+        int num = Integer.parseInt(br.readLine());
 
-        if( rounds < 1 || rounds > 10000000){}
-        else {
-            int[] inputs = new int[rounds];
+        String[] arr = new String[num];
 
-            for (int i = 0; i < inputs.length; i++) {
-                int temp = Integer.parseInt(br.readLine());
-                if (temp < 1 || temp > 10000){}
-                else
-                    inputs[i] = temp;
-            }
-
-            inputs = sort_list(inputs);
-
-            for (int i = 0; i < inputs.length; i++)
-                bw.write(inputs[i] + "\n");
+        for(int i =  0 ; i < num ; i++) {
+            arr[i] = br.readLine();
         }
-        bw.flush();
-        br.close();
-        bw.close();
+
+        Arrays.sort(arr, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                if(s1.length() == s2.length()) {
+                    return s1.compareTo(s2);
+                }else {
+                    return s1.length() - s2.length();
+                }
+
+            }
+        });
+
+        System.out.println(arr[0]);
+        for(int i = 1; i < num; i++) {
+            if (!arr[i].equals(arr[i - 1])) {
+                System.out.println(arr[i]);
+            }
+        }
     }
 }
