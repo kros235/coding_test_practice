@@ -1,10 +1,9 @@
-import java.io.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+package recursive;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_25501 {
 
     static int counter = 0;
 
@@ -43,4 +42,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
