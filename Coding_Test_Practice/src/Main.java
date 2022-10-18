@@ -32,8 +32,8 @@ public class Main {
             }
         }
         else{
-            for (int i = startY; i < amount; i+= block_Size) {
-                for (int j = startX; j < amount; j+=block_Size) {
+            for (int i = startY; i < startY + amount; i+= block_Size) {
+                for (int j = startX; j < startX + amount; j+=block_Size) {
 
                     if (counter == 5 - 1) {
                         draw_square(amount/3, i, j, false);
