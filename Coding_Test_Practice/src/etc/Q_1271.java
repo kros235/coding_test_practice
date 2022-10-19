@@ -1,11 +1,11 @@
+package etc;
+
 import java.io.*;
-import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1271 {
 
     public static void main(String args[]) throws IOException {
 
@@ -19,11 +19,11 @@ public class Main {
 
 
 
-            StringBuilder sb = new StringBuilder();
-            sb.append( amount.divide(candidate) + "\n" );
-            sb.append( amount.mod(candidate) + "\n");
+        StringBuilder sb = new StringBuilder();
+        sb.append( amount.divide(candidate) + "\n" );
+        sb.append( amount.mod(candidate) + "\n");
 
-            bw.write( String.valueOf(sb) );
+        bw.write( String.valueOf(sb) );
 
 
 
@@ -31,4 +31,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
