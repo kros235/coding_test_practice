@@ -1,7 +1,10 @@
+package recursive;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_24060 {
 
     static int target_counter = 0;
     static int target_round;
@@ -12,7 +15,7 @@ public class Main {
 
         int[] temp_list = new int[end - start + 1];
 
-        // ´Ù¼öÀÇ ¿ø¼Ò°¡ ÀÖ´Â °æ¿ì, temp_list ·ÎÀÇ º¹»ç
+        // ë‹¤ìˆ˜ì˜ ì›ì†Œê°€ ìˆëŠ” ê²½ìš°, temp_list ë¡œì˜ ë³µì‚¬
         if (start != end) {
             int counter = 0;
             for (int i = start; i <= end; i++) {
@@ -20,13 +23,13 @@ public class Main {
             }
         }
 
-        // ´ÜÀÏ ¿ø¼ÒÀÏ °æ¿ì, temp_list ·ÎÀÇ º¹»ç
+        // ë‹¨ì¼ ì›ì†Œì¼ ê²½ìš°, temp_list ë¡œì˜ ë³µì‚¬
         else {
             temp_list[0] = list[end];
         }
 
         // ===============================================
-        // ¿ø¼ÒÀÇ °³¼ö°¡ 2°³¶ó Á÷Á¢ ºñ±³°¡ °¡´ÉÇÑ °æ¿ì
+        // ì›ì†Œì˜ ê°œìˆ˜ê°€ 2ê°œë¼ ì§ì ‘ ë¹„êµê°€ ê°€ëŠ¥í•œ ê²½ìš°
         if ((end - start) == 1) {
 
             int temp;
@@ -48,12 +51,12 @@ public class Main {
             return temp_list;
         }
 
-        // ¿ø¼ÒÀÇ °³¼ö°¡ 1°³¶ó ºñ±³°¡ ÇÊ¿ä ¾ø´Â °æ¿ì
+        // ì›ì†Œì˜ ê°œìˆ˜ê°€ 1ê°œë¼ ë¹„êµê°€ í•„ìš” ì—†ëŠ” ê²½ìš°
         else if ((end - start) == 0) {
             return temp_list;
         }
 
-        // ´Ù¼öÀÇ ¿ø¼Ò°¡ ÀÖ¾î¼­, Àç±ÍÀûÀ¸·Î ¸®½ºÆ®¸¦ ±¸È¹È­ÇÏ¿© ³ª´² Ã³¸®ÇØ¾ßÇÏ´Â °æ¿ì
+        // ë‹¤ìˆ˜ì˜ ì›ì†Œê°€ ìˆì–´ì„œ, ì¬ê·€ì ìœ¼ë¡œ ë¦¬ìŠ¤íŠ¸ë¥¼ êµ¬íší™”í•˜ì—¬ ë‚˜ëˆ  ì²˜ë¦¬í•´ì•¼í•˜ëŠ” ê²½ìš°
         else {
 
             int mid = (end - start) / 2;
@@ -62,7 +65,7 @@ public class Main {
             int[] tmp_list2 = merge_sort(list, start + mid + 1, end);
 
 
-            // ±¸È¹È­ÇØ¼­ Á¤¸®ÇÑ ¸®½ºÆ®¸¦ ´Ù½Ã º´ÇÕÇÏ´Â °úÁ¤¿¡¼­ Á¤·ÄÇÏ´Â ºÎºĞ
+            // êµ¬íší™”í•´ì„œ ì •ë¦¬í•œ ë¦¬ìŠ¤íŠ¸ë¥¼ ë‹¤ì‹œ ë³‘í•©í•˜ëŠ” ê³¼ì •ì—ì„œ ì •ë ¬í•˜ëŠ” ë¶€ë¶„
             int result[] = new int[tmp_list1.length + tmp_list2.length];
 
             int tmp1_counter = 0;
@@ -71,7 +74,7 @@ public class Main {
 
             for (; ; ) {
 
-                // ¿ø¼ÒÀÇ ´ë¼Ò ºñ±³
+                // ì›ì†Œì˜ ëŒ€ì†Œ ë¹„êµ
                 if (tmp_list1[tmp1_counter] < tmp_list2[tmp2_counter]) {
                     result[result_counter++] = tmp_list1[tmp1_counter++];
                     target_counter++;
@@ -85,12 +88,12 @@ public class Main {
                 }
 
 
-                // ³¡±îÁö µÎ ¸®½ºÆ®¸¦ ºñ±³ÇØ¼­, °á°ú¿¡ Á¤·ÄÀÌ ³¡³­ °æ¿ì
+                // ëê¹Œì§€ ë‘ ë¦¬ìŠ¤íŠ¸ë¥¼ ë¹„êµí•´ì„œ, ê²°ê³¼ì— ì •ë ¬ì´ ëë‚œ ê²½ìš°
                 if (result_counter == result.length)
                     break;
 
 
-                // ÇÑ ÂÊ ¸®½ºÆ®¿¡ ¿ø¼Ò¸¦ ÀüºÎ ¼ÒÁøÇØ¼­, ¿ø¼Ò°¡ ³²Àº ¸®½ºÆ®ÀÇ ¿ø¼Ò¸¦ ´Ù ³²Àº °á°ú¿¡ ±âÀçÇØ¾ßÇÏ´Â °æ¿ì
+                // í•œ ìª½ ë¦¬ìŠ¤íŠ¸ì— ì›ì†Œë¥¼ ì „ë¶€ ì†Œì§„í•´ì„œ, ì›ì†Œê°€ ë‚¨ì€ ë¦¬ìŠ¤íŠ¸ì˜ ì›ì†Œë¥¼ ë‹¤ ë‚¨ì€ ê²°ê³¼ì— ê¸°ì¬í•´ì•¼í•˜ëŠ” ê²½ìš°
                 if (tmp_list1.length == tmp1_counter || tmp_list2.length == tmp2_counter) {
 
                     if (tmp_list1.length == tmp1_counter) {
@@ -154,4 +157,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
