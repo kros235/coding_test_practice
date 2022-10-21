@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Q_4938 {
+public class Q_4948 {
     static boolean[] table_list;
 
     public static void check_prime_numbers(int max_range){
