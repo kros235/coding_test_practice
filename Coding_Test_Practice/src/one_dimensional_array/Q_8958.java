@@ -1,8 +1,6 @@
-package one_dimension_array;
+package one_dimensional_array;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Q_8958 {
     public static void main(String args[]) throws IOException {

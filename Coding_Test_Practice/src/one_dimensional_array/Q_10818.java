@@ -1,7 +1,6 @@
-package one_dimension_array;
+package one_dimensional_array;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Q_10818 {

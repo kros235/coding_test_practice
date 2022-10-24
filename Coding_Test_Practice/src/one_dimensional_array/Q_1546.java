@@ -1,7 +1,6 @@
-package one_dimension_array;
+package one_dimensional_array;
 
 import java.io.*;
-import java.util.Arrays;
 
 public class Q_1546 {
     public static void main(String args[]) throws IOException {

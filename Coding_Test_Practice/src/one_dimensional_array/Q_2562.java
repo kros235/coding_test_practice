@@ -1,4 +1,4 @@
-package one_dimension_array;
+package one_dimensional_array;
 import java.util.Scanner;
 
 public class Q_2562 {
