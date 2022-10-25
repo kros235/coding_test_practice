@@ -1,12 +1,11 @@
+package two_dimensional_array;
+
 import java.io.*;
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_2563 {
     public static void main(String args[]) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -48,4 +47,3 @@ public class Main {
         }
     }
 }
-
