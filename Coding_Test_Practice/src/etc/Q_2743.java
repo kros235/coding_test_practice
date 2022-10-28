@@ -1,6 +1,9 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_2743 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -12,6 +15,7 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
-    }
-}
 
+    }
+
+}
