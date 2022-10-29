@@ -1,7 +1,11 @@
-import java.io.*;
+package etc;
 
-public class Main {
-    public static void main(String args[]) throws IOException {
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Q_2754 {
+
+    public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -69,6 +73,7 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
+
     }
 }
 
