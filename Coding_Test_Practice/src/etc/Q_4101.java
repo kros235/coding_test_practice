@@ -1,12 +1,13 @@
+package etc;
 import java.io.*;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Main {
-    public static void main(String args[]) throws IOException {
+public class Q_4101 {
 
+    public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
 
         StringBuilder sb = new StringBuilder();;
         while (true) {
@@ -32,5 +33,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
