@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.StringTokenizer;
+package etc;
 
-public class Main {
+import java.io.*;
+
+public class Q_5339 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,5 +26,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
