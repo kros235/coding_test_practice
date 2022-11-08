@@ -1,6 +1,10 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+
+public class Q_2744 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,5 +28,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
