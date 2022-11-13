@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_15740 {
 
     public static void main(String args[]) throws IOException {
 
@@ -22,5 +24,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
