@@ -1,5 +1,8 @@
+package etc;
+
 import java.io.*;
-public class Main {
+
+public class Q_14581 {
 
     public static void main(String args[]) throws IOException {
 
@@ -17,6 +20,7 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
-    }
-}
 
+    }
+
+}
