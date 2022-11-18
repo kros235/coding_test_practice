@@ -1,5 +1,9 @@
+package etc;
+
 import java.io.*;
-public class Main {
+import java.math.BigInteger;
+
+public class Q_15962 {
 
     public static void main(String args[]) throws IOException {
 
@@ -16,5 +20,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
