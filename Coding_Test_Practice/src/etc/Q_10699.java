@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.time.LocalDate;
 
-public class Main {
+public class Q_10699 {
 
     public static void main(String args[]) throws IOException {
 
@@ -17,5 +19,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
