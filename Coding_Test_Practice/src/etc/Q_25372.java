@@ -1,7 +1,10 @@
-import java.io.*;
-import java.time.LocalDate;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+import java.util.StringTokenizer;
+
+public class Q_25372 {
 
     public static void main(String args[]) throws IOException {
 
@@ -22,18 +25,18 @@ public class Main {
             else
                 checker = false;
 
-                for (int j = 0; j < test.length(); j++) {
-                    char partial = test.charAt(j);
+            for (int j = 0; j < test.length(); j++) {
+                char partial = test.charAt(j);
 
-                    if ((partial >= 48 && partial <= 57)
-                            || (partial >= 65 && partial <= 90)
-                            || (partial >= 97 && partial <= 122))
-                        continue;
-                    else {
-                        checker = false;
-                        break;
-                    }
+                if ((partial >= 48 && partial <= 57)
+                        || (partial >= 65 && partial <= 90)
+                        || (partial >= 97 && partial <= 122))
+                    continue;
+                else {
+                    checker = false;
+                    break;
                 }
+            }
 
             if ( checker == true)
                 sb.append( "yes\n");
@@ -48,5 +51,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
