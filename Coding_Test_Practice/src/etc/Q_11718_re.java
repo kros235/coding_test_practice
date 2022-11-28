@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.StringTokenizer;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+
+public class Q_11718_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -12,7 +14,7 @@ public class Main {
         String input;
 
         while( (input=br.readLine())!= null && input.length() > 0){
-                sb.append( input + "\n");
+            sb.append( input + "\n");
         }
 
         bw.write(String.valueOf(sb));
@@ -20,5 +22,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
