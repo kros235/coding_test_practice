@@ -8,12 +8,9 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringBuilder sb = new StringBuilder();
-        String input     = br.readLine();
+        int input = Integer.parseInt(br.readLine());
 
-        for (int i = input.length()-1 ; i >= 0 ; i -- ){
-            sb.append( input.charAt(i) );
-        }
-        sb.append( "\n" );
+        sb.append( (input + 1) * 2 + " " + (input +1) * 3 );
 
         bw.write(String.valueOf(sb));
         bw.flush();
