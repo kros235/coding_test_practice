@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.Scanner;
 
-public class Main {
+public class Q_16394 {
 
     public static void main(String args[]) throws IOException {
 
@@ -12,5 +14,5 @@ public class Main {
         System.out.println(output);
 
     }
-}
 
+}
