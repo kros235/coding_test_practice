@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_26082 {
 
     public static void main(String args[]) throws IOException {
 
@@ -22,7 +24,6 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
-
     }
-}
 
+}
