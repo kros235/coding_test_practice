@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_5524 {
 
     public static void main(String args[]) throws IOException {
 
@@ -23,7 +25,7 @@ public class Main {
             result = "";
             for (int j = 0; j < names.get(i).length(); j++) {
                 if (names.get(i).charAt(j) >= 65 && names.get(i).charAt(j) <= 90) {
-                    result += (char)(names.get(i).charAt(j) + 32);
+                    result += (char) (names.get(i).charAt(j) + 32);
                 } else
                     result += names.get(i).charAt(j);
             }
@@ -37,5 +39,5 @@ public class Main {
         bw.close();
 
     }
-}
 
+}
