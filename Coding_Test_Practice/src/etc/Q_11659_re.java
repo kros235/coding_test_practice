@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Q_11659_re {
 
     public static long add_range(int[] digits, int start_index, int end_index) {
         long result = digits[end_index] - digits[start_index-1];
@@ -46,5 +48,5 @@ public class Main {
         bw.close();
 
     }
-}
 
+}
