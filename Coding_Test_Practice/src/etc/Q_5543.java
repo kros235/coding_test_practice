@@ -1,10 +1,13 @@
-import java.io.*;
-import java.util.Arrays;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_5543 {
 
     public static void main(String args[]) throws IOException {
-
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -16,7 +19,7 @@ public class Main {
         int[] beverages = new int[2];
 
         for ( int i = 0 ; i < 3 ; i++ )
-             burgers[i] = Integer.parseInt( br.readLine() );
+            burgers[i] = Integer.parseInt( br.readLine() );
 
         for ( int i = 0 ; i < 2 ; i++ )
             beverages[i] = Integer.parseInt( br.readLine() );
@@ -31,5 +34,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
