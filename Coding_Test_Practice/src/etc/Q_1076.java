@@ -1,9 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
-import java.util.Arrays;
 import java.util.HashMap;
 
-public class Main {
+public class Q_1076 {
 
     static HashMap<String, String> resistance_1 = new HashMap<>();
     static HashMap<String, String> resistance_2 = new HashMap<>();
@@ -76,5 +77,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
