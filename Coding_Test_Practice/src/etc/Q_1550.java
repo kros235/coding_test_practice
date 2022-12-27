@@ -1,9 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.HashMap;
 
-public class Main {
+public class Q_1550 {
 
     public static void main(String args[]) throws IOException {
 
@@ -55,5 +55,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
