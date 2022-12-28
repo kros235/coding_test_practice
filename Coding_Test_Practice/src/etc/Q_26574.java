@@ -1,6 +1,9 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+
+public class Q_26574 {
 
     public static void main(String args[]) throws IOException {
 
@@ -22,5 +25,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
