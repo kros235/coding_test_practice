@@ -1,7 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1002_re {
+
     public static long check_crossed_range_points(long x1, long y1, long r1, long x2, long y2, long r2) {
 
 
@@ -16,7 +19,7 @@ public class Main {
             return -1;
 
 
-        // case #1
+            // case #1
         else if (Math.abs(r1 - r2) < distance && Math.abs(r1 + r2) > distance)
             return 2;
 
@@ -44,7 +47,7 @@ public class Main {
             return 0;
 
 
-        // case #4, 접점 X
+            // case #4, 접점 X
         else    //  r1 + r2 < d
             return 0;
 
@@ -84,5 +87,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
