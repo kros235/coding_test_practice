@@ -1,9 +1,9 @@
+package etc;
+
 import java.io.*;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.math.BigInteger;
 
-public class Main {
-
+public class Q_24078 {
 
     public static void main(String args[]) throws IOException {
 
@@ -21,5 +21,5 @@ public class Main {
         br.close();
         bw.close();
     }
-}
 
+}
