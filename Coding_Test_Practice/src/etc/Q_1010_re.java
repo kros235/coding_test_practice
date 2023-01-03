@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1010_re {
 
     public static BigInteger factorial(BigInteger number) {
 
@@ -39,6 +41,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
