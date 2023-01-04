@@ -1,8 +1,9 @@
+package etc;
+
 import java.io.*;
-import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1252 {
 
     public static String cut_first_zeros(String number1) {
 
@@ -112,5 +113,3 @@ public class Main {
         bw.close();
     }
 }
-
-
