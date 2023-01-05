@@ -1,6 +1,8 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_1075 {
 
     public static String find_dividable(long n, long f) {
 
@@ -42,6 +44,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
