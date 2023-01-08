@@ -1,6 +1,9 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_2444 {
 
 
     public static void main(String args[]) throws IOException {
@@ -34,7 +37,7 @@ public class Main {
                 counter--;
             }
 
-                sb.append("\n");
+            sb.append("\n");
         }
 
         bw.write(String.valueOf(sb));
@@ -44,5 +47,3 @@ public class Main {
         bw.close();
     }
 }
-
-
