@@ -1,6 +1,9 @@
+package recursive;
+
 import java.io.*;
 
-public class Main {
+public class Q_11729_re {
+
     static StringBuilder sb = new StringBuilder();
 
     public static void move_disks_process( int disks , int start, int middle, int end){
@@ -47,6 +50,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
