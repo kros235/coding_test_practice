@@ -1,7 +1,11 @@
+package etc;
+
 import java.io.*;
+import java.math.BigInteger;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_11660_re {
 
     public static int[][] calculate_parital_sum(int[][] original_arrays){
         int[][] partial_sum_arrays  =   new int[original_arrays.length][original_arrays.length];
@@ -98,5 +102,3 @@ public class Main {
         bw.close();
     }
 }
-
-
