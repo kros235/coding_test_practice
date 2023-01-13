@@ -3,39 +3,27 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         StringBuilder sb    =   new StringBuilder();
+        StringTokenizer st  =   new StringTokenizer( br.readLine() );
 
+        int rounds      =   Integer.parseInt( st.nextToken() );
+        long plug_sum    =   0;
 
-        int rounds  =   Integer.parseInt( br.readLine() );
 
         for ( int i = 0 ; i < rounds ; i++ ) {
-
-            StringTokenizer st = new StringTokenizer(br.readLine());
-
-            int rows       =   Integer.parseInt( st.nextToken() );
-            int alphabet   =   Integer.parseInt(  String.valueOf( st.nextToken().charAt(0) - 'A')  ) ;
-
-
-            for ( int j = 0 ; j < rows ; j++ ) {
-
-                for ( int k = 0 ; k <= j ; k++ ) {
-                    sb.append( String.valueOf(  (char)( alphabet + 'A') ) );
-                }
-                sb.append("\n");
-
-                if( alphabet >= (int)('Z' - 'A') )
-                    alphabet =  0;
-                else
-                    alphabet++;
-            }
-            sb.append("\n");
+            int plug =  Integer.parseInt( br.readLine() );
+            if ( i != rounds - 1)
+                plug_sum += ( plug - 1 );
+            else
+                plug_sum += plug;
         }
+
+        sb.append( plug_sum + "\n");
 
         bw.write(String.valueOf(sb));
 
