@@ -1,7 +1,11 @@
+package etc;
+
 import java.io.*;
+import java.util.ArrayList;
+
+public class Q_2556 {
 
 
-public class Main {
 
     public static void main(String args[]) throws IOException {
 
@@ -25,6 +29,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
