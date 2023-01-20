@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
+import java.util.ArrayList;
 
-
-public class Main {
+public class Q_26711 {
 
     public static void main(String args[]) throws IOException {
 
@@ -11,10 +13,10 @@ public class Main {
 
         StringBuilder sb = new StringBuilder();
 
-        BigInteger first     =   new BigInteger( br.readLine() );
-        BigInteger second     =   new BigInteger( br.readLine() );
+        BigInteger first = new BigInteger(br.readLine());
+        BigInteger second = new BigInteger(br.readLine());
 
-        sb.append ( first.add(second) + "\n");
+        sb.append(first.add(second) + "\n");
 
         bw.write(String.valueOf(sb));
 
@@ -22,6 +24,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
