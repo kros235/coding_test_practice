@@ -1,10 +1,13 @@
+package etc;
+
 import java.io.*;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-
-public class Main {
+public class Q_1267 {
 
     public static void main(String args[]) throws IOException {
+
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -23,9 +26,9 @@ public class Main {
 
 
 
-                youngSik_bill += 10 * ( call_time[i] / 30 );
-                if ( call_time[i] % 30 >= 0 )
-                    youngSik_bill += 10;
+            youngSik_bill += 10 * ( call_time[i] / 30 );
+            if ( call_time[i] % 30 >= 0 )
+                youngSik_bill += 10;
 
             minSik_bill += 15 * ( call_time[i] / 60 );
             if ( call_time[i] % 60 >= 0 )
@@ -49,6 +52,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
