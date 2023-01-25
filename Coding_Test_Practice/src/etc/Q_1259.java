@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
-import java.util.StringTokenizer;
+import java.math.BigInteger;
+import java.util.HashMap;
 
-
-public class Main {
+public class Q_1259 {
 
     public static String get_reverse_string (String input){
         String result = "";
@@ -43,5 +45,3 @@ public class Main {
         bw.close();
     }
 }
-
-
