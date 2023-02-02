@@ -1,8 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-
-public class Main {
+public class Q_1392 {
 
     public static long find_which_note_you_are(long[] music_note, long queries) {
         int index = 0;
@@ -48,5 +49,3 @@ public class Main {
         bw.close();
     }
 }
-
-
