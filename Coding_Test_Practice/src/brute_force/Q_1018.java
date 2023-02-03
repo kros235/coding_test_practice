@@ -1,9 +1,12 @@
+package brute_force;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
+public class Q_1018 {
 
-public class Main {
 
     public static String[][] copy_partial_board(String[][] board, int row, int column) {
 
@@ -130,5 +133,3 @@ public class Main {
         bw.close();
     }
 }
-
-
