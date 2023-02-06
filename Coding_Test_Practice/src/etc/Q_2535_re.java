@@ -1,7 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_2535_re {
+
 
     public static void main(String args[]) throws IOException {
 
@@ -68,6 +71,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
