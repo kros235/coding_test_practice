@@ -1,7 +1,8 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+
+public class Q_25314 {
 
     public static void main(String args[]) throws IOException {
 
@@ -22,6 +23,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
