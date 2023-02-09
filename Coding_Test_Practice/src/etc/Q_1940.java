@@ -1,7 +1,11 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_1940 {
+
     public static int binarySearch(long key, long[] arr, int low, int high) {
         int mid;
 
@@ -54,6 +58,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
