@@ -1,8 +1,12 @@
-import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
+package set_and_map;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Q_1620_re {
 
 
     // hashmap에 value 로 key 찾기
@@ -59,5 +63,3 @@ public class Main {
         bw.close();
     }
 }
-
-
