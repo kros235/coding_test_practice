@@ -1,8 +1,9 @@
-import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_1100 {
 
     public static String change_initial_color(String previous_one) {
         if (previous_one.equals("W"))
@@ -48,6 +49,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
