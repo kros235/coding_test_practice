@@ -1,8 +1,10 @@
-import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_1159 {
 
     public static void main(String args[]) throws IOException {
 
@@ -43,5 +45,3 @@ public class Main {
         bw.close();
     }
 }
-
-
