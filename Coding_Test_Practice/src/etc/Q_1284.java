@@ -1,6 +1,9 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_1284 {
+
 
     public static void main(String args[]) throws IOException {
 
@@ -45,5 +48,3 @@ public class Main {
         bw.close();
     }
 }
-
-
