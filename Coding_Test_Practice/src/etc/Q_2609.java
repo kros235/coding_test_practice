@@ -1,7 +1,10 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_2609 {
 
     public static int final_a, final_b;
 
@@ -68,5 +71,4 @@ public class Main {
         bw.close();
     }
 }
-
 
