@@ -1,8 +1,10 @@
-import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
+package geometry_1;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_4153 {
 
     public static String check_right_triangle ( int[] lines ){
         int sum = (int) (Math.pow( lines[0], 2 ) + Math.pow( lines[1], 2 ));
@@ -41,5 +43,3 @@ public class Main {
         bw.close();
     }
 }
-
-

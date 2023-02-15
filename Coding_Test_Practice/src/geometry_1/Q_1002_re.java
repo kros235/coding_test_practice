@@ -1,4 +1,4 @@
-package etc;
+package geometry_1;
 
 import java.io.*;
 import java.util.StringTokenizer;
