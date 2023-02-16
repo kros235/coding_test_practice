@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_11050 {
 
     // ====================================================================
     //  n C r   =   factorial(n) / ( factorial( n - r ) * factorial( r ) );
@@ -37,6 +39,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
