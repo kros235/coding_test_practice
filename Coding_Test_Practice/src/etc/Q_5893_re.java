@@ -1,5 +1,10 @@
+package etc;
+
 import java.io.*;
-public class Main {
+import java.util.ArrayList;
+
+public class Q_5893_re {
+
     public static String add( String input, String seventeen) {
 
         String result   =   "";
@@ -71,6 +76,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
