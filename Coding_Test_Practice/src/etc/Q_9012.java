@@ -1,6 +1,8 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_9012 {
 
     public static String judge_String(String input) {
 
@@ -42,5 +44,3 @@ public class Main {
         bw.close();
     }
 }
-
-
