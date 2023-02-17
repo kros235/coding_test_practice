@@ -1,6 +1,11 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+import java.util.HashMap;
+
+public class Q_1094 {
+
     private static int count_sticks(int target_length, int stick_length) {
 
         int counter = 0;
@@ -40,5 +45,3 @@ public class Main {
         bw.close();
     }
 }
-
-
