@@ -1,4 +1,4 @@
-package etc;
+package stack;
 
 import java.io.*;
 

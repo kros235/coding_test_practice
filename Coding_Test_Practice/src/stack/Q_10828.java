@@ -1,8 +1,10 @@
+package stack;
+
 import java.io.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_10828 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,25 +36,25 @@ public class Main {
                     if (stack.isEmpty() == true)
                         sb.append("-1\n");
                     else
-                        sb.append( stack.pop() + "\n" );
+                        sb.append(stack.pop() + "\n");
                     break;
                 }
                 case "size": {
-                    sb.append( stack.size() + "\n");
+                    sb.append(stack.size() + "\n");
                     break;
                 }
                 case "empty": {
-                    if ( stack.isEmpty() == true )
+                    if (stack.isEmpty() == true)
                         sb.append("1\n");
                     else
                         sb.append("0\n");
                     break;
                 }
                 default: { //"top"
-                    if ( stack.isEmpty() == true )
-                        sb.append ("-1\n");
+                    if (stack.isEmpty() == true)
+                        sb.append("-1\n");
                     else
-                        sb.append ( stack.peek() + "\n" );
+                        sb.append(stack.peek() + "\n");
                     break;
                 }
             }
@@ -64,5 +66,3 @@ public class Main {
         bw.close();
     }
 }
-
-
