@@ -1,8 +1,9 @@
+package one_dimensional_array;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_10811 {
     public static int[] reverse ( int[] basket, int start, int end){
         int[] result    =   new int[basket.length];
 
@@ -51,5 +52,3 @@ public class Main {
         bw.close();
     }
 }
-
-
