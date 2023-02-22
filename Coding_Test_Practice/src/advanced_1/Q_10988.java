@@ -1,6 +1,9 @@
+package advanced_1;
+
 import java.io.*;
 
-public class Main {
+public class Q_10988 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,6 +25,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
-
-
