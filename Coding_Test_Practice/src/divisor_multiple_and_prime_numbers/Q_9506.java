@@ -1,7 +1,10 @@
+package divisor_multiple_and_prime_numbers;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Q_9506 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -46,5 +49,3 @@ public class Main {
         bw.close();
     }
 }
-
-
