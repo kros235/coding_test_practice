@@ -1,8 +1,11 @@
+package advanced_1;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_10812 {
+
 
     public static int[] shuffle ( int[] basket, int begin, int end, int mid ){
 
@@ -79,5 +82,3 @@ public class Main {
         bw.close();
     }
 }
-
-
