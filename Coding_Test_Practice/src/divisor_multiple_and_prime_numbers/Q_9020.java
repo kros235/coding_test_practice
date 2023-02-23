@@ -1,4 +1,4 @@
-package basic_mathematics_2;
+package divisor_multiple_and_prime_numbers;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -12,9 +12,9 @@ public class Q_9020 {
         table_list[0] = false;
         table_list[1] = false;
 
-        // ³ª´©´Â ¼ö
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         for ( int i = 2 ; i < Math.sqrt(max_range * 2) ; i ++ ){
-            // ³ª´²Áö´Â ¼ö
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
             for (int j = i ; j <= max_range ; j++){
                 if( j % i == 0 && i!=j)
                     table_list[j] = false;

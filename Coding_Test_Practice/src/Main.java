@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String args[]) throws IOException {
@@ -7,31 +8,23 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
+        int a = 1, b = 1;
+        while (true){
+            String input    =   br.readLine();
+            if ( !input.equals("0 0") ){
+                StringTokenizer st  =   new StringTokenizer( input );
+                a   =   Integer.parseInt( st.nextToken() );
+                b   =   Integer.parseInt( st.nextToken() );
 
-        ArrayList<String> inputs    =   new ArrayList<>();
-
-        int max_length = -1;
-        for ( int i = 0 ; i < 5 ; i++ ) {
-            inputs.add(br.readLine());
-            if ( max_length < inputs.get(i).length() )
-                max_length = inputs.get(i).length();
-        }
-
-        String[][] array  =   new String[5][ max_length ];
-        for ( int i = 0 ; i < 5 ; i++ ) {
-            for ( int j = 0 ; j < max_length ; j++ ) {
-                if ( j < inputs.get(i).length() )
-                    array[i][j] = String.valueOf(inputs.get(i).charAt(j));
+                if ( (a < b) && (b % a == 0) )
+                    sb.append ( "factor\n" );
+                else if ( (a > b) && (a % b == 0) )
+                    sb.append ( "multiple\n" );
                 else
-                    array[i][j] = " ";
+                    sb.append ( "neither\n" );
             }
-        }
-
-        for ( int i = 0 ; i < max_length ; i++ ){
-            for ( int j = 0 ; j < 5 ; j++ ){
-                if ( !array[j][i].equals(" ") )
-                    sb.append ( array[j][i] );
-            }
+            else
+                break;
         }
 
         bw.write(String.valueOf(sb));

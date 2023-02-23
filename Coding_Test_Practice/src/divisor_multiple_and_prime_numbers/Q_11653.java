@@ -1,4 +1,4 @@
-package basic_mathematics_2;
+package divisor_multiple_and_prime_numbers;
 
 import java.io.*;
 import java.util.ArrayList;

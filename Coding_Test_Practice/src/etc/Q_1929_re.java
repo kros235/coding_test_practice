@@ -1,4 +1,4 @@
-package basic_mathematics_2;
+package etc;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Q_1929_re {
     static boolean[] prime_checker;
 
-    // ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼ ¾Ë°í¸®Áò ( Sieve of Eratosthenes Algorithm )
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ä½ºï¿½×³×½ï¿½ï¿½ï¿½ Ã¼ ï¿½Ë°ï¿½ï¿½ï¿½ ( Sieve of Eratosthenes Algorithm )
 
     public static void find_prime_numbers(int min_range, int max_range) {
 
@@ -21,10 +21,10 @@ public class Q_1929_re {
                 prime_checker[i] = false;
         }
 
-        // ³ª´©´Â ¼ö
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         for ( int i = 2 ; i <= Math.sqrt(max_range) ; i++){
 
-            // ³ª´²Áö´Â ¼ö
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
             for ( int j = min_range; j < prime_checker.length ; j++){
 
                 if( prime_checker[j]== false){

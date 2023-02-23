@@ -1,7 +1,6 @@
-package basic_mathematics_2;
+package divisor_multiple_and_prime_numbers;
 
 import java.io.*;
-import java.math.BigInteger;
 
 public class Q_1978 {
     public static int check_prime_number(int number) {
