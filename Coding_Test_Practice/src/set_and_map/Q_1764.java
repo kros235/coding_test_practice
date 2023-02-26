@@ -1,7 +1,9 @@
+package set_and_map;
+
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_1764 {
 
     public static void main(String args[]) throws IOException {
 
@@ -42,5 +44,4 @@ public class Main {
         br.close();
         bw.close();
     }
-
 }
