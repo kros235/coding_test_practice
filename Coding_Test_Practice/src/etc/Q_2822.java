@@ -1,7 +1,11 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class Q_2822 {
 
     public static void main(String args[]) throws IOException {
 
@@ -52,6 +56,4 @@ public class Main {
         }
         return null;
     }
-
-
 }
