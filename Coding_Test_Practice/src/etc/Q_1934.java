@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1934 {
 
     public static int find_least_common_multiple( int a, int b){
         int divider =   1;
@@ -52,4 +54,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
