@@ -1,9 +1,9 @@
+package greedy_algorithm;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
-
-
+public class Q_11047 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -31,7 +31,7 @@ public class Main {
         int index   =   coins.length - 1;
         while (true){
             if ( money == 0 )
-                 break;
+                break;
             else if ( money < coins[index] )
                 index--;
             else {
