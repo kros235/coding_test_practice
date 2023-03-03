@@ -1,10 +1,10 @@
+package greedy_algorithm;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
-
-
+public class Q_11399 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +20,6 @@ public class Main {
             time_cosumption[i] = Integer.parseInt(st.nextToken());
 
         Arrays.sort(time_cosumption);
-
 
         int sum = 0;
         for (int i = 0; i < amount_of_ppl; i++) {
@@ -38,5 +37,4 @@ public class Main {
         br.close();
         bw.close();
     }
-
 }
