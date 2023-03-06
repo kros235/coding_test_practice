@@ -1,9 +1,9 @@
-import java.io.*;
-import java.util.Arrays;
-import java.util.Stack;
-import java.util.StringTokenizer;
+package stack;
 
-public class Main {
+import java.io.*;
+import java.util.Stack;
+
+public class Q_10773 {
 
 
     public static void main(String args[]) throws IOException {
@@ -12,7 +12,7 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        Stack<Integer>  money_pot   =   new Stack<>();
+        Stack<Integer> money_pot   =   new Stack<>();
         int amount_of_call = Integer.parseInt(br.readLine());
 
 
@@ -39,5 +39,4 @@ public class Main {
         br.close();
         bw.close();
     }
-
 }
