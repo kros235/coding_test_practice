@@ -1,6 +1,10 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_27866 {
+
 
     public static void main(String args[]) throws IOException {
 
