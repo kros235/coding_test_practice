@@ -1,7 +1,11 @@
+package etc;
+
 import java.io.*;
+import java.math.BigInteger;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_14490 {
 
     public static void main(String args[]) throws IOException {
 
@@ -41,5 +45,4 @@ public class Main {
 
         return a + ":" + b;
     }
-
 }
