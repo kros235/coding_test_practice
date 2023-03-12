@@ -1,8 +1,9 @@
+package etc;
+
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_2018_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -16,14 +17,11 @@ public class Main {
         int[] sum_array =   new int [n];
         sum_array[0]    =   1;
 
-        for ( int i = 2 ; i <= n ; i++ ) {
+        for ( int i = 2 ; i <= n ; i++ )
             sum_array[i - 1] = sum_array[i - 2] + i;
-        }
-
 
         int start_index     =   0;
         int end_index       =   0;
-
 
         while ( end_index != n ){
 
@@ -39,15 +37,13 @@ public class Main {
                 result++;
                 end_index++;
             }
-
-
         }
 
         sb.append ( result );
-
         bw.write(sb + "\n");
         bw.flush();
         br.close();
         bw.close();
     }
+
 }
