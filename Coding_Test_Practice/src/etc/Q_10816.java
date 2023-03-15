@@ -1,9 +1,10 @@
+package etc;
+
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_10816 {
 
     public static void main(String args[]) throws IOException {
 
@@ -11,7 +12,7 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        HashMap < Integer, Integer > card_deck = new HashMap<>();
+        HashMap< Integer, Integer > card_deck = new HashMap<>();
         int card_amount    =   Integer.parseInt( br.readLine() );
         StringTokenizer st =   new StringTokenizer( br.readLine() );
 
@@ -44,6 +45,5 @@ public class Main {
         br.close();
         bw.close();
     }
-
 
 }
