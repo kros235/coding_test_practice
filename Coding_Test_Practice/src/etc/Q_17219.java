@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_17219 {
 
     public static void main(String args[]) throws IOException {
 
@@ -10,7 +12,7 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        HashMap < String, String > password_list = new HashMap<>();
+        HashMap< String, String > password_list = new HashMap<>();
 
         StringTokenizer st =   new StringTokenizer( br.readLine() );
         int list           =   Integer.parseInt( st.nextToken() );
