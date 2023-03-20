@@ -1,4 +1,4 @@
-package geometry_1;
+package etc;
 
 import java.io.*;
 import java.util.Arrays;

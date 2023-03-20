@@ -1,4 +1,4 @@
-package geometry_1;
+package geometry_rectangle_and_triangle;
 
 import java.io.*;
 import java.util.Arrays;

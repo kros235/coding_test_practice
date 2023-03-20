@@ -1,9 +1,12 @@
-import java.io.*;
+package geometry_rectangle_and_triangle;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+
+public class Q_27323 {
+
 
     public static void main(String args[]) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
