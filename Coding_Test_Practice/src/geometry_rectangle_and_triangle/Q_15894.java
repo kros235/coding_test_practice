@@ -1,6 +1,9 @@
-import java.io.*;
+package geometry_rectangle_and_triangle;
 
-public class Main {
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Q_15894 {
 
     public static void main(String args[]) throws IOException {
 
@@ -16,4 +19,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
