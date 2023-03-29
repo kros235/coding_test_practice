@@ -1,7 +1,9 @@
+package divisor_multiple_and_prime_numbers_2;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_13241 {
 
     public static long find_min(long a, long b) {
         if (a > b)
@@ -46,4 +48,5 @@ public class Main {
         bw.close();
 
     }
+
 }

@@ -1,4 +1,4 @@
-package etc;
+package divisor_multiple_and_prime_numbers_2;
 
 import java.io.*;
 import java.util.StringTokenizer;
