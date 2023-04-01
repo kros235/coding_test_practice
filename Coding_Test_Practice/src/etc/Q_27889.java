@@ -1,6 +1,9 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+
+public class Q_27889 {
 
     public static void main(String args[]) throws IOException {
 
