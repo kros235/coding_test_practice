@@ -1,4 +1,4 @@
-package basic_mathematics_1;
+package general_mathematics_1;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -41,8 +41,8 @@ public class Q_1193 {
         else
             remainder = a - boundaries.get((int) area_index - 1);
 
-        // area_index % 2 == 0 :  ¿ìÇÏÇâ ¹æÇâÀ¸·Î ÁøÇà
-        // area_index % 2 == 1 :  ÁÂ»óÇâ ¹æÇâÀ¸·Î ÁøÇà
+        // area_index % 2 == 0 :  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // area_index % 2 == 1 :  ï¿½Â»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 
         if (area_index == 0)

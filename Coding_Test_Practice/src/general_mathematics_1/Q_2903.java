@@ -1,6 +1,9 @@
-import java.io.*;
+package general_mathematics_1;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_2903 {
 
     public static void main(String args[]) throws IOException {
 
@@ -21,3 +24,10 @@ public class Main {
 
     }
 }
+
+/*
+0   :   01   04   (2)
+1   :   04   09   (3)
+2   :   16   25  (5)
+3   :   64   81  (9)
+*/

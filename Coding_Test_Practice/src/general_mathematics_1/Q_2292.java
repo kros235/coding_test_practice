@@ -1,4 +1,4 @@
-package basic_mathematics_1;
+package general_mathematics_1;
 
 import java.io.*;
 import java.util.ArrayList;

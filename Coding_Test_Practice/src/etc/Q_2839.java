@@ -1,7 +1,6 @@
-package basic_mathematics_1;
+package etc;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class Q_2839 {
     public static int calculate_sacks(int sugar_amount) {
@@ -11,19 +10,19 @@ public class Q_2839 {
         int quotient    =   sugar_amount / 5;
         int remainder   =   sugar_amount % 5;
 
-        // 5 kg ¹Ì¸¸
+        // 5 kg ï¿½Ì¸ï¿½
         if( quotient == 0 ){
             remainder   =   sugar_amount % 3;
-            // 5 kg ¹Ì¸¸, 3kg·Î ¾È ³ª´²Áö´Â ¼ö (¿¹ : 4kg)
+            // 5 kg ï¿½Ì¸ï¿½, 3kgï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ (ï¿½ï¿½ : 4kg)
             if( remainder!= 0 )
                 return -1;
             else
                 return (sugar_amount / 3);
         }
 
-        // 5 kg ÀÌ»ó
+        // 5 kg ï¿½Ì»ï¿½
         else {
-            // 5kg + 3kg È¥ÇÕ À¯Çü Å½»ö
+            // 5kg + 3kg È¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
             for (int i = quotient; i > 0; i--){
                 int remain_amount = sugar_amount - (5 * i);
                 if( remain_amount % 3 == 0){
@@ -32,7 +31,7 @@ public class Q_2839 {
                 }
             }
 
-            // 3kg ´Üµ¶ À¯Çü Å½»ö
+            // 3kg ï¿½Üµï¿½ ï¿½ï¿½ï¿½ï¿½ Å½ï¿½ï¿½
             if (result == -1 &&  sugar_amount % 3 == 0){
                 return (sugar_amount / 3);
             }
