@@ -1,7 +1,10 @@
+package general_mathematics_1;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_11005 {
+
 
     public static char translator(long num) {
         if (num >= 0 && num < 10)
