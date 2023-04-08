@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.StringTokenizer;
+package general_mathematics_1;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+
+public class Q_2720 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
