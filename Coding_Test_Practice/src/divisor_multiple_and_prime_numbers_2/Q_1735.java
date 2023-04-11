@@ -1,7 +1,9 @@
+package divisor_multiple_and_prime_numbers_2;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1735 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,7 +23,7 @@ public class Main {
         int fraction_2_multiplier   =   LCM / fractions[1][1];
 
         int topper_sum              =   fractions[0][0] * fraction_1_multiplier
-                                    +   fractions[1][0] * fraction_2_multiplier;
+                +   fractions[1][0] * fraction_2_multiplier;
 
         int GCM =   get_greatest_common_measure ( topper_sum, LCM );
 
