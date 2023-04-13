@@ -1,7 +1,10 @@
+package divisor_multiple_and_prime_numbers_2;
+
 import java.io.*;
+import java.util.StringTokenizer;
 
+public class Q_2485 {
 
-public class Main {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
