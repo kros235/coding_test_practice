@@ -1,4 +1,4 @@
-package number_theory_and_combinatorics;
+package advanced_2;
 
 import java.io.*;
 import java.util.Arrays;
