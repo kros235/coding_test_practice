@@ -1,7 +1,11 @@
-import java.io.*;
-import java.util.StringTokenizer;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.math.BigInteger;
+import java.util.HashMap;
+
+public class Q_5341 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
