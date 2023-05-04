@@ -1,8 +1,12 @@
+package etc;
+
 import java.io.*;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_9417 {
 
     public static int get_gcd(int a, int b) {
         int result = 1;
