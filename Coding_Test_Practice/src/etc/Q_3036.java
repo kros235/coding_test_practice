@@ -1,8 +1,9 @@
+package etc;
+
 import java.io.*;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_3036 {
 
     public static int get_gcd(int a, int b){
         int result  =   1;
@@ -52,4 +53,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
