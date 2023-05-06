@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Q_9507 {
 
     public static long get_koong(int round){
         ArrayList<Long> koong = new ArrayList<>();
