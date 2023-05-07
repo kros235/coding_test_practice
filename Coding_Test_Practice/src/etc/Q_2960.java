@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_2960 {
 
     public static int find_min( int[] numbers ){
 
