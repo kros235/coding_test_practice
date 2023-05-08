@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_10709 {
 
     private static int[][] get_estimation(String[][] cloud, int row, int column) {
         int[][] estimation  =   new int[row][column];
