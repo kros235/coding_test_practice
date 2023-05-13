@@ -1,8 +1,10 @@
+package etc;
+
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Stack;
 
-public class Main {
+public class Q_4949 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,7 +22,7 @@ public class Main {
                 for ( int i = 0 ; i < input.length() ; i++ ){
                     String temp =   String.valueOf( input.charAt(i) );
                     if ( temp.equals( String.valueOf( '[' )) || temp.equals( String.valueOf(']'))
-                        || temp.equals(String.valueOf('(')) || temp.equals(String.valueOf(')')) ){
+                            || temp.equals(String.valueOf('(')) || temp.equals(String.valueOf(')')) ){
                         bracket.push( temp );
                     }
                 }
