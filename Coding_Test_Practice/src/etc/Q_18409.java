@@ -1,6 +1,10 @@
+package etc;
+
 import java.io.*;
 
-public class Main {
+public class Q_18409 {
+
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -14,10 +18,10 @@ public class Main {
         for ( int i = 0 ; i < length ; i++ ){
             String temp = String.valueOf(input.charAt(i));
             if ( temp.equals(String.valueOf('a'))
-                || temp.equals(String.valueOf('e'))
-                || temp.equals(String.valueOf('i'))
-                || temp.equals(String.valueOf('o'))
-                || temp.equals(String.valueOf('u')))
+                    || temp.equals(String.valueOf('e'))
+                    || temp.equals(String.valueOf('i'))
+                    || temp.equals(String.valueOf('o'))
+                    || temp.equals(String.valueOf('u')))
                 count++;
         }
 
