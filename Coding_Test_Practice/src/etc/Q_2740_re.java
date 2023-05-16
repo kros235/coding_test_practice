@@ -1,8 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_2740_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -63,5 +64,4 @@ public class Main {
         }
         return arr;
     }
-
 }
