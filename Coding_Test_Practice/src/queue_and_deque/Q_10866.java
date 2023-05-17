@@ -1,10 +1,12 @@
+package queue_and_deque;
+
 import java.io.*;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_10866 {
 
     public static void main(String args[]) throws IOException {
 
@@ -13,7 +15,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         int round = Integer.parseInt( br.readLine() );
-        Deque<Integer>  deque   =   new LinkedList<>();
+        Deque<Integer> deque   =   new LinkedList<>();
 
 
         for (int i = 0; i < round ; i++) {
@@ -93,4 +95,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
