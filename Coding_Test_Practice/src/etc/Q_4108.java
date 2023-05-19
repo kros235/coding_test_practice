@@ -1,7 +1,10 @@
+package etc;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_4108 {
 
     public static int[][] mine;
 
@@ -102,4 +105,5 @@ public class Main {
         }
 
     }
+
 }
