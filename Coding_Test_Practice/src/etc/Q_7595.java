@@ -1,6 +1,13 @@
-import java.io.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Q_7595 {
+
+
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,7 +22,7 @@ public class Main {
                 for ( int i = 1 ; i <= round ; i++ ){
                     for ( int j = 0 ; j < i ; j++ )
                         sb.append("*");
-                        sb.append("\n");
+                    sb.append("\n");
                 }
             }
             else
@@ -27,4 +34,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
