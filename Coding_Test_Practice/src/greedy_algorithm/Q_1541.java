@@ -1,6 +1,11 @@
+package greedy_algorithm;
+
 import java.io.*;
-public class Main {
+import java.util.StringTokenizer;
+
+public class Q_1541 {
     public static void main(String args[]) throws IOException {
+
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
