@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -8,35 +9,33 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < 3; i++) {
-            int count = 0;
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            for (int j = 0; j < 4; j++) {
-                if (Integer.parseInt(st.nextToken()) == 0)
+        long round  =   Integer.parseInt( br.readLine() );
+
+        for (int i = 0 ; i < round ; i++) {
+            StringTokenizer st  =   new StringTokenizer(br.readLine());
+            long candy          =   Long.parseLong( st.nextToken() );
+            int  boxes          =   Integer.parseInt( st.nextToken() );
+            int[] box_size      =   new int[ boxes ];
+
+            for (int j = 0 ; j < boxes ; j++) {
+                st  =   new StringTokenizer(br.readLine());
+                int  width          =   Integer.parseInt( st.nextToken() );
+                int  height         =   Integer.parseInt( st.nextToken() );
+
+                box_size[j]         =   width * height;
+            }
+            Arrays.sort ( box_size );
+
+            int count   =   0;
+            for (int j = boxes-1 ; j >= 0 ; j--) {
+                if ( candy <= 0 )
+                     break;
+                else {
+                    candy -= box_size[j];
                     count++;
-            }
-            switch (count) {
-                case 1: {
-                    sb.append("A\n");
-                    break;
-                }
-                case 2: {
-                    sb.append("B\n");
-                    break;
-                }
-                case 3: {
-                    sb.append("C\n");
-                    break;
-                }
-                case 4: {
-                    sb.append("D\n");
-                    break;
-                }
-                default: {
-                    sb.append("E\n");
-                    break;
                 }
             }
+            sb.append ( count + "\n" );
         }
 
         bw.write(String.valueOf(sb));
