@@ -1,7 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1388 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,13 +20,13 @@ public class Main {
         for ( int i = 0 ; i < row ; i++ ){
             String input    = br.readLine();
             for ( int j = 0 ; j < col ; j++ )
-                tile[i][j]  =   String.valueOf( input.charAt(j) );            
+                tile[i][j]  =   String.valueOf( input.charAt(j) );
         }
 
-        int tile_sum    =   0;        
+        int tile_sum    =   0;
         tile_sum        +=  find_horizontal_tiles   ( tile );
         tile_sum        +=  find_vertical_tiles     ( tile );
-        
+
         sb.append ( tile_sum + "\n" );
         bw.write(String.valueOf(sb));
         bw.flush();
@@ -45,7 +48,7 @@ public class Main {
 
             for ( int j = 1 ; j < tile[i].length ; j++ ){
                 if ( tile[i][j-1].equals( String.valueOf("|" ) ) == true
-                    && tile[i][j].equals( String.valueOf("-" ) ) == true)
+                        && tile[i][j].equals( String.valueOf("-" ) ) == true)
                     layer_tile_sum++;
             }
             sum += layer_tile_sum;
