@@ -1,7 +1,11 @@
+package etc;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_17504 {
+
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,7 +37,7 @@ public class Main {
         numerator    =   Long.parseLong( st.nextToken() );
         denominator  =   Long.parseLong( st.nextToken() );
 
-        
+
         sb.append ( (denominator-numerator) + " " + denominator );
         bw.write(String.valueOf(sb));
         bw.flush();
@@ -82,7 +86,5 @@ public class Main {
         temp /= divider;
         denominator /= divider;
         return temp + " " + denominator;
-     }
-
-
+    }
 }
