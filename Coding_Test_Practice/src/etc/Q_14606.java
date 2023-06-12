@@ -1,7 +1,11 @@
+package etc;
+
 import java.io.*;
+import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_14606 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,4 +28,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
