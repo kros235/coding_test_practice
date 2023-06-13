@@ -1,10 +1,13 @@
+package set_and_map;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_7785 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -12,7 +15,7 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         int log_count   =   Integer.parseInt( br.readLine() );
-        HashMap<String, String>    employee  =   new HashMap<>();
+        HashMap<String, String> employee  =   new HashMap<>();
 
         for ( int i = 0 ; i < log_count ; i++ ){
             StringTokenizer st  =   new StringTokenizer( br.readLine() );
