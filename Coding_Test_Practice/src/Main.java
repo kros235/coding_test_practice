@@ -11,33 +11,50 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        int log_count   =   Integer.parseInt( br.readLine() );
-        HashMap<String, String>    employee  =   new HashMap<>();
+        long     target_num       =   Integer.parseInt( br.readLine() );
+        long     total_digit      =   0;
 
-        for ( int i = 0 ; i < log_count ; i++ ){
-            StringTokenizer st  =   new StringTokenizer( br.readLine() );
-            String name         =   st.nextToken();
-            String existence    =   st.nextToken();
 
-            if ( existence.equals("enter") )
-                employee.put( name, existence );
-            else
-                employee.remove( name );
+        if ( target_num == 100000000 ) {
+            total_digit += 9;
+            target_num  -= 1;
+        }
+        if ( target_num >= 10000000 &&    target_num < 100000000 ) {
+            total_digit += (target_num - 10000000 + 1) * 8;
+            target_num  -= ( target_num - 10000000 + 1 );
+        }
+        if ( target_num >= 1000000 &&    target_num < 10000000 ) {
+            total_digit += (target_num - 1000000 + 1) * 7;
+            target_num  -= ( target_num - 1000000 + 1 );
+        }
+        if ( target_num >= 100000 &&    target_num < 1000000 ) {
+            total_digit += (target_num - 100000 + 1) * 6;
+            target_num  -= ( target_num - 100000 + 1 );
+        }
+        if ( target_num >= 10000 &&    target_num < 100000 ) {
+            total_digit += (target_num - 10000 + 1) * 5;
+            target_num  -= ( target_num - 10000 + 1 );
+        }
+        if ( target_num >= 1000 &&    target_num < 10000 ) {
+            total_digit += (target_num - 1000 + 1) * 4;
+            target_num  -= ( target_num - 1000 + 1 );
+        }
+        if ( target_num >= 100 &&    target_num < 1000 ) {
+            total_digit += (target_num - 100 + 1) * 3;
+            target_num  -= ( target_num - 100 + 1 );
+        }
+        if ( target_num >= 10 &&    target_num < 100 ) {
+            total_digit += (target_num - 10 + 1) * 2;
+            target_num  -= ( target_num - 10 + 1 );
+        }
+        if ( target_num >= 1 &&    target_num < 10 ) {
+            total_digit += (target_num - 1 + 1) * 1;
         }
 
-        String[] name   =   new String[ employee.size() ];
-        int count       =   0;
-        for ( Map.Entry<String, String> entrySet : employee.entrySet() )
-            name[count++]   =   entrySet.getKey();
-        Arrays.sort ( name );
-
-
-        for ( int i = employee.size()-1 ; i >= 0 ; i-- )
-            sb.append ( name[i] + "\n");
-
+        sb.append ( total_digit + "\n");
         bw.write(String.valueOf(sb));
         bw.flush();
         br.close();
         bw.close();
-    }
+    }    
 }
