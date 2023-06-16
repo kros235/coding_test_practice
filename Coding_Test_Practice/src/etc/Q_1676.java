@@ -1,11 +1,10 @@
+package etc;
+
 import java.io.*;
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1676 {
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -33,5 +32,7 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
+
     }
+
 }
