@@ -1,5 +1,14 @@
+package etc;
+
 import java.io.*;
-public class Main {
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Q_11721 {
+
+
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,4 +29,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
