@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_2606 {
 
     public static void main(String args[]) throws IOException {
 
@@ -14,7 +16,7 @@ public class Main {
         boolean[] visit_checker =   new boolean[ node_count ];
         Arrays.fill( visit_checker, false);
 
-        ArrayList< ArrayList<Integer> > link    =   new ArrayList<>();
+        ArrayList<ArrayList<Integer>> link    =   new ArrayList<>();
         for ( int i = 0 ; i < node_count ; i++ )
             link.add( new ArrayList<>() );
 
