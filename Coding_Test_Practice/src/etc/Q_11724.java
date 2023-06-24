@@ -1,7 +1,9 @@
+package etc;
+
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_11724 {
 
     public static int chunk_count = 0;
     static StringBuilder sb = new StringBuilder();
@@ -97,6 +99,5 @@ public class Main {
         }
         return visit_checker;
     }
-
 
 }
