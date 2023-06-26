@@ -1,7 +1,10 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Q_2343_re {
 
     public static void main(String args[]) throws IOException {
 
