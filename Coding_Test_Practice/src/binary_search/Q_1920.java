@@ -1,4 +1,4 @@
-package etc;
+package binary_search;
 
 import java.io.*;
 import java.util.LinkedHashMap;
