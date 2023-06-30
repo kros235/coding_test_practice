@@ -9,35 +9,45 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        String room_no = br.readLine();
+        int ppl_count = Integer.parseInt(br.readLine());
 
-        int[] number_set = new int[10];
-        Arrays.fill(number_set, 0);
-        for (int i = 0; i < room_no.length(); i++) {
-            int partial_room_no = Integer.parseInt(String.valueOf(room_no.charAt(i)));
-            number_set[partial_room_no]++;
+        Calendar min_date = Calendar.getInstance();
+        min_date.set(1990, 1, 1);
+
+
+        String[][] ppl_info     =   new String[ppl_count][2];
+        for ( int i = 0 ; i < ppl_count ; i++ ){
+            StringTokenizer st  =    new StringTokenizer( br.readLine() );
+            String name =   st.nextToken();
+            int day     =   Integer.parseInt( st.nextToken() );
+            int month   =   Integer.parseInt( st.nextToken() );
+            int year    =   Integer.parseInt( st.nextToken() );
+
+            Calendar now_date = Calendar.getInstance();
+            now_date.set(year, month, day);
+
+            ppl_info[i][0]  = String.valueOf((now_date.getTimeInMillis() - min_date.getTimeInMillis() ) / 1000 / 60 / 60);
+            ppl_info[i][1]  = name;
         }
 
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < number_set.length; i++) {
-            if (i == 6 || i == 9) {
-                if ((number_set[6] + number_set[9]) % 2 == 1) {
-                    if (max < (number_set[6] + number_set[9]) / 2 + 1)
-                        max = (number_set[6] + number_set[9]) / 2 + 1;
-                } else {
 
-                    if (max < (number_set[6] + number_set[9]) / 2)
-                        max = (number_set[6] + number_set[9]) / 2;
+        String youngest_name = null, oldest_name = null;
+        int min =   Integer.MAX_VALUE, max  =   Integer.MIN_VALUE;
+        for ( int i = 0 ; i < ppl_count ; i++ ){
+            
+            if ( min > Integer.parseInt( ppl_info[i][0]) ) {
+                min           =   Integer.parseInt( ppl_info[i][0]);
+                oldest_name =   ppl_info[i][1];
+            }
 
-                }
-            } else {
-                if (max < number_set[i])
-                    max = number_set[i];
+            if ( max < Integer.parseInt( ppl_info[i][0]) ) {
+                max           =   Integer.parseInt( ppl_info[i][0]);
+                youngest_name   =   ppl_info[i][1];
             }
         }
 
 
-        sb.append(max);
+        sb.append(youngest_name + "\n" + oldest_name);
         bw.write(String.valueOf(sb));
         bw.flush();
         br.close();
