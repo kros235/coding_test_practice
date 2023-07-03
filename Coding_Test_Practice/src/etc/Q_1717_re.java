@@ -1,7 +1,9 @@
-import java.io.*;
-import java.util.*;
+package etc;
 
-public class Main {
+import java.io.*;
+import java.util.StringTokenizer;
+
+public class Q_1717_re {
 
     private static int[] paths;
     public static void main(String args[]) throws IOException {
@@ -31,7 +33,7 @@ public class Main {
                 node_a  =   node_b;
                 node_b  =   temp;
             }
-            
+
             if ( operation == 0 )
                 union ( paths, node_a, node_b );
             else {
@@ -41,7 +43,7 @@ public class Main {
                 else
                     sb.append("NO\n");
             }
-        }        
+        }
 
         bw.write( String.valueOf( sb ) );
         bw.flush();
@@ -75,7 +77,5 @@ public class Main {
         else
             return true;
     }
-
-
 }
 
