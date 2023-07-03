@@ -9,23 +9,25 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        int round = Integer.parseInt(br.readLine());
-        for (int i = 0; i < round; i++) {
-            StringTokenizer st = new StringTokenizer( br.readLine() );
-            int number_count    =   Integer.parseInt( st.nextToken() );
-            long[] number_array  =   new long[ number_count ];
-            for (int j = 0 ; j < number_count ; j++ )
-                number_array[j] = Integer.parseInt( st.nextToken() );
-
-            Arrays.sort ( number_array );
-            long gcd_sum =   0;
-            for (int j = 0 ; j < number_count-1 ; j++ ) {
-                for (int k = j+1 ; k < number_count ; k++ ) {
-                    gcd_sum += get_gcd ( number_array[k], number_array[j] );
-                }
-            }
-            sb.append( gcd_sum + "\n");
-        }
+       String input =   br.readLine();
+       switch ( input ){
+           case "SONGDO":{
+               sb.append("HIGHSCHOOL\n");
+               break;
+           }
+           case "CODE":{
+               sb.append("MASTER\n");
+               break;
+           }
+           case "2023":{
+               sb.append("0611\n");
+               break;
+           }
+           default:{
+               sb.append("CONTEST\n");
+               break;
+           }
+       }
 
         bw.write( String.valueOf( sb ) );
         bw.flush();
@@ -33,11 +35,7 @@ public class Main {
         bw.close();
     }
 
-    private static long get_gcd(long a, long b) {
-        if ( a % b != 0 )
-            return get_gcd( b, a % b );
-        else
-            return b;
-    }
+
+
 }
 
