@@ -1,9 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_8979_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -56,7 +58,7 @@ public class Main {
         for ( int i = 1 ; i < list.length ; i++ ){
 
             if ( list[i-1].gold_medal   ==   list[i].gold_medal
-                && list[i-1].silver_medal   ==   list[i].silver_medal
+                    && list[i-1].silver_medal   ==   list[i].silver_medal
                     && list[i-1].bronze_medal   ==   list[i].bronze_medal
             ) {
                 list[i].rank = rank;
@@ -100,20 +102,6 @@ public class Main {
         }
     }
 
-    public static class Student {
-        String name;
-        int korean;
-        int english;
-        int math;
 
 
-        public Student(String name, int korean, int english, int math) {
-            super();
-            this.name = name;
-            this.korean = korean;
-            this.english = english;
-            this.math = math;
-        }
-    }
 }
-
