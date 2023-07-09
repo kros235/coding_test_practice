@@ -1,9 +1,12 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1431 {
 
     public static void main(String args[]) throws IOException {
 
@@ -68,6 +71,4 @@ public class Main {
 
     }
 
-
 }
-
