@@ -1,9 +1,10 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
-import java.util.Comparator;
+import java.util.Stack;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1874_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -41,6 +42,4 @@ public class Main {
         bw.close();
     }
 
-
 }
-
