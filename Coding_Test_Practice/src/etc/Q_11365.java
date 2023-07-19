@@ -1,7 +1,9 @@
+package etc;
 
 import java.io.*;
+import java.util.Arrays;
 
-public class Main {
+public class Q_11365 {
 
     public static void main(String args[]) throws IOException {
 
@@ -26,7 +28,4 @@ public class Main {
         br.close();
         bw.close();
     }
-
-
 }
-
