@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
 import java.util.HashMap;
 
-public class Main {
+public class Q_1235 {
 
     public static void main(String args[]) throws IOException {
 
@@ -15,7 +16,7 @@ public class Main {
         for ( int i = 0 ; i < student_count ; i++ )
             student_code[i]     =   br.readLine();
 
-        HashMap <String, Integer> distinct_checker  =   new HashMap<>();
+        HashMap<String, Integer> distinct_checker  =   new HashMap<>();
 
         for ( int i = 1 ; i <= 100 ; i++ ){
             distinct_checker.clear();
@@ -39,6 +40,4 @@ public class Main {
         bw.close();
     }
 
-
 }
-
