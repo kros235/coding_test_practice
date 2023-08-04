@@ -1,7 +1,9 @@
+package etc;
 
 import java.io.*;
+import java.util.HashMap;
 
-public class Main {
+public class Q_1543 {
 
     public static void main(String args[]) throws IOException {
 
@@ -11,9 +13,9 @@ public class Main {
 
         String input_original_String    =   br.readLine();
         String target_string            =   br.readLine();
-        
+
         int count   =   find_string(input_original_String, target_string);
-        
+
         sb.append( count );
         bw.write(String.valueOf(sb));
         bw.flush();
@@ -41,6 +43,4 @@ public class Main {
         return count;
     }
 
-
 }
-
