@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.HashMap;
 
-public class Main {
+public class Q_14584 {
 
     public static void main(String args[]) throws IOException {
 
