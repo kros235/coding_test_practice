@@ -1,8 +1,12 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1269 {
 
     static Map<String, Integer> components =   new HashMap<>();
 
@@ -49,6 +53,5 @@ public class Main {
                 components.put( value, 1 );
         }
     }
-
 
 }
