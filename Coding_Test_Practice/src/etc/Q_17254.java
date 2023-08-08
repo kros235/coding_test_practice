@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_17254 {
 
     public static void main(String args[]) throws IOException {
 
@@ -16,25 +19,25 @@ public class Main {
         int keyboard_count  =   Integer.parseInt( st.nextToken() );
         int press_event      =   Integer.parseInt( st.nextToken() );
 
-        Comparator<keyboard> myComparator   =   new Comparator<keyboard>() {
+        Comparator<Main.keyboard> myComparator   =   new Comparator<Main.keyboard>() {
             @Override
-            public int compare(keyboard o1, keyboard o2) {
+            public int compare(Main.keyboard o1, Main.keyboard o2) {
                 if ( o1.timing != o2.timing )
                     return o1.timing - o2.timing;
                 else {
-                        return o1.key_num - o2.key_num;
+                    return o1.key_num - o2.key_num;
                 }
             }
         };
 
-        keyboard[] keyboards    =   new keyboard[ press_event ];
+        Main.keyboard[] keyboards    =   new Main.keyboard[ press_event ];
         for ( int i = 0 ; i < press_event ; i++ ){
             st  =   new StringTokenizer( br.readLine() );
             int temp_key_num     =   Integer.parseInt( st.nextToken() );
             int temp_timing      =   Integer.parseInt( st.nextToken() );
             String temp_letter   =   st.nextToken();
 
-            keyboards[i]    =   new keyboard( temp_key_num, temp_timing, temp_letter );
+            keyboards[i]    =   new Main.keyboard( temp_key_num, temp_timing, temp_letter );
         }
 
         Arrays.sort ( keyboards, myComparator );
@@ -60,8 +63,4 @@ public class Main {
             this.letter    =   letter;
         }
     }
-
-
-
-
 }
