@@ -19,9 +19,9 @@ public class Q_17254 {
         int keyboard_count  =   Integer.parseInt( st.nextToken() );
         int press_event      =   Integer.parseInt( st.nextToken() );
 
-        Comparator<Main.keyboard> myComparator   =   new Comparator<Main.keyboard>() {
+        Comparator<keyboard> myComparator   =   new Comparator<keyboard>() {
             @Override
-            public int compare(Main.keyboard o1, Main.keyboard o2) {
+            public int compare(keyboard o1, keyboard o2) {
                 if ( o1.timing != o2.timing )
                     return o1.timing - o2.timing;
                 else {
@@ -30,14 +30,14 @@ public class Q_17254 {
             }
         };
 
-        Main.keyboard[] keyboards    =   new Main.keyboard[ press_event ];
+        keyboard[] keyboards    =   new keyboard[ press_event ];
         for ( int i = 0 ; i < press_event ; i++ ){
             st  =   new StringTokenizer( br.readLine() );
             int temp_key_num     =   Integer.parseInt( st.nextToken() );
             int temp_timing      =   Integer.parseInt( st.nextToken() );
             String temp_letter   =   st.nextToken();
 
-            keyboards[i]    =   new Main.keyboard( temp_key_num, temp_timing, temp_letter );
+            keyboards[i]    =   new keyboard( temp_key_num, temp_timing, temp_letter );
         }
 
         Arrays.sort ( keyboards, myComparator );

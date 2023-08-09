@@ -1,8 +1,12 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-public class Main {
+public class Q_10546 {
+
 
     public static void main(String args[]) throws IOException {
 
@@ -37,4 +41,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
