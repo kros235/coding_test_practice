@@ -1,9 +1,10 @@
+package greedy_algorithm;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_13305 {
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -67,6 +68,4 @@ public class Main {
 
         return distance_sum;
     }
-
-
 }
