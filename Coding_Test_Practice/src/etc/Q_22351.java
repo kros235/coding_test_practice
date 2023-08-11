@@ -1,7 +1,10 @@
+package etc;
 
 import java.io.*;
+import java.math.BigInteger;
+import java.util.HashMap;
 
-public class Main {
+public class Q_22351 {
 
     public static void main(String args[]) throws IOException {
 
@@ -69,4 +72,5 @@ public class Main {
         }
 
     }
+
 }
