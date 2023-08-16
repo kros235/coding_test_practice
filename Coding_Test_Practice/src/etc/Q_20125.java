@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_20125 {
 
     public static void main(String args[]) throws IOException {
 
@@ -125,6 +126,4 @@ public class Main {
         }
         return right_leg_length;
     }
-
-
 }
