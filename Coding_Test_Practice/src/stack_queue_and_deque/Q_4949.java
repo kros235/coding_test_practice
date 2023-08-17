@@ -1,4 +1,4 @@
-package etc;
+package stack_queue_and_deque;
 
 import java.io.*;
 import java.util.Stack;

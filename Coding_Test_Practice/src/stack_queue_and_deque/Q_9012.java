@@ -1,4 +1,4 @@
-package stack;
+package stack_queue_and_deque;
 
 import java.io.*;
 

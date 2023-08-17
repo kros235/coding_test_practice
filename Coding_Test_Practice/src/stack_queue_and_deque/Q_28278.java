@@ -1,11 +1,14 @@
+package stack_queue_and_deque;
 
 import java.io.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q_28278 {
+
 
     public static void main(String args[]) throws IOException {
+
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

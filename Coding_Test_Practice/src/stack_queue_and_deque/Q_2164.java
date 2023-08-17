@@ -1,9 +1,8 @@
-package queue_and_deque;
+package stack_queue_and_deque;
 
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringTokenizer;
 
 public class Q_2164 {
 

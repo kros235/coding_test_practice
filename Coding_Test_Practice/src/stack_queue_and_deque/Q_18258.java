@@ -1,4 +1,4 @@
-package queue_and_deque;
+package stack_queue_and_deque;
 
 import java.io.*;
 import java.util.LinkedList;
