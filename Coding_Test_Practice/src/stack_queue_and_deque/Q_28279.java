@@ -1,8 +1,12 @@
+package stack_queue_and_deque;
 
 import java.io.*;
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_28279 {
 
     public static void main(String args[]) throws IOException {
 
@@ -74,4 +78,5 @@ public class Main {
         br.close();
         bw.close();
     }
+
 }
