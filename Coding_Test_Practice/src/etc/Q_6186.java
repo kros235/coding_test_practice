@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_6186 {
+
     public static String[][]  field;
     public static void main(String args[]) throws IOException {
 
@@ -72,18 +75,19 @@ public class Main {
 
 
         if ( (j+1) >= col )
-                right_check =   false;
+            right_check =   false;
         else{
             if ( field[i][j+1].equals( String.valueOf("#") ) )
                 right_check =   true;
         }
 
         if ( upper_check == false && bottom_check == false
-            &&  left_check == false && right_check == false )
+                &&  left_check == false && right_check == false )
             return 1;
         else {
             field[i][j]    =   ".";
             return 0;
         }
     }
+
 }
