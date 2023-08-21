@@ -1,9 +1,9 @@
+package stack_queue_and_deque;
 
 import java.io.*;
 import java.util.*;
 
-public class Main {
-
+public class Q_2346_re {
 
     public static class Balloon {
         int index; // 풍선 번호
