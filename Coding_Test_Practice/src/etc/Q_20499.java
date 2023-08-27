@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_20499 {
+
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,5 +27,7 @@ public class Main {
         bw.flush();
         br.close();
         bw.close();
+
     }
+
 }
