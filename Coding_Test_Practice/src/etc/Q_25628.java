@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_25628 {
+
     public static long bun, patties;
     public static void main(String args[]) throws IOException {
 
@@ -39,4 +42,5 @@ public class Main {
         else
             return false;
     }
+
 }
