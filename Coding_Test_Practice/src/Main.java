@@ -9,24 +9,67 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        int num_amount = Integer.parseInt(br.readLine());
+        while ( true ){
+            String password =   br.readLine();
 
-        HashMap<Integer, Boolean> numbers   =   new HashMap<Integer, Boolean>();
+            if ( password.equals("end") )
+                break;
+            else {
+                if ( password.contains("a") || password.contains("e") ||
+                        password.contains("i") || password.contains("o") || password.contains("u") ){
 
-        StringTokenizer st  =   new StringTokenizer( br.readLine());
-        for (int i = 0; i < num_amount; i++)
-            numbers.put( Integer.parseInt( st.nextToken() ), false );
+
+                    boolean vowel_consonant_pass_checker    =   true;
+                    int vowel_counter   =   0, consonant_counter    =   0;
+                    for ( int i = 0 ; i < password.length() ; i++ ){
+                        if ( String.valueOf( password.charAt(i) ).equals("a")
+                                || String.valueOf( password.charAt(i) ).equals("e")
+                                || String.valueOf( password.charAt(i) ).equals("i")
+                                || String.valueOf( password.charAt(i) ).equals("o")
+                                || String.valueOf( password.charAt(i) ).equals("u") ) {
+                            consonant_counter = 0;
+                            vowel_counter++;
+                        }
+                        else{
+                            vowel_counter = 0;
+                            consonant_counter++;
+                        }
+
+                        if ( vowel_counter >= 3 || consonant_counter >= 3){
+                            sb.append("<" + password + "> is not acceptable.\n");
+                            vowel_consonant_pass_checker    =   false;
+                            break;
+                        }
+                    }
+
+                    if ( vowel_consonant_pass_checker == true ){
+
+                        boolean consequtive_duplication_checker    =   true;
+                        for ( int i = 1 ; i < password.length() ; i++ ){
+                                int j   =   i - 1;
+                                if ( (!String.valueOf( password.charAt(i) ).equals("e") && !String.valueOf( password.charAt(j) ).equals("e") )
+                                && (!String.valueOf( password.charAt(i) ).equals("o") && !String.valueOf( password.charAt(j) ).equals("o") ) ){
+;                                   if ( String.valueOf( password.charAt(i) ).equals( String.valueOf( password.charAt(j) ) ) ){
+                                        sb.append("<" + password + "> is not acceptable.\n");
+                                        consequtive_duplication_checker =   false;
+                                        break;
+                                    }
+                                }
+
+                            if ( consequtive_duplication_checker == false )
+                                break;
+                        }
+                        if ( consequtive_duplication_checker == true )
+                            sb.append("<" + password + "> is acceptable.\n");
+                    }
+                }
+                else
+                    sb.append("<" + password + "> is not acceptable.\n");
 
 
-        int[] sort_numbers  =   new int[ numbers.size() ];
-        int index   =   0;
-        for (Map.Entry<Integer, Boolean> map : numbers.entrySet() ){
-            sort_numbers[index++]   =   map.getKey();
+            }
         }
-        Arrays.sort ( sort_numbers );
 
-        for (int i = 0; i < sort_numbers.length; i++)
-            sb.append(sort_numbers[i] + " ");
         bw.write(sb.toString());
         bw.flush();
         br.close();
