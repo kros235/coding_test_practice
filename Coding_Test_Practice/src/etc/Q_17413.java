@@ -1,9 +1,12 @@
+package etc;
 
 import java.io.*;
-import java.lang.reflect.Array;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Stack;
 
-public class Main {
+public class Q_17413 {
+
 
     public static StringBuilder sb = new StringBuilder();
 
@@ -53,4 +56,5 @@ public class Main {
         while (!stack.isEmpty())
             sb.append(stack.pop());
     }
+
 }
