@@ -1,8 +1,10 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1253 {
 
     public static void main(String args[]) throws IOException {
 
