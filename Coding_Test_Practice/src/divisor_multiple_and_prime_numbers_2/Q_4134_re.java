@@ -1,11 +1,8 @@
+package divisor_multiple_and_prime_numbers_2;
 
 import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
 
-public class Main {
-
-
+public class Q_4134_re {
 
     public static void main(String args[]) throws IOException {
 
@@ -51,5 +48,4 @@ public class Main {
             n++;
         }
     }
-
 }
