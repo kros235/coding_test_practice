@@ -1,10 +1,9 @@
+package etc;
 
 import java.io.*;
-import java.math.BigInteger;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_1012 {
 
     public static boolean[][] visit ;
     public static int[][] field;
