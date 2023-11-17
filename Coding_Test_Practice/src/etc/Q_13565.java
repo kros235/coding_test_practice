@@ -1,8 +1,10 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_13565 {
+
 
     public static int[][] map;
     public static boolean[][] visit;
