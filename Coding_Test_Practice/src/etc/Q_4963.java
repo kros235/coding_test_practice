@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_4963 {
 
     public static int[][] map;
     public static boolean[][] visit;
@@ -20,7 +21,7 @@ public class Main {
             row = Integer.parseInt(st.nextToken());
 
             if ( row == 0 && col == 0 )
-                 break;
+                break;
             else{
                 int island_count    =   0;
 
