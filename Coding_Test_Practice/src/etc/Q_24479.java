@@ -1,9 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.StringTokenizer;
 
-public class Main {
-
+public class Q_24479 {
 
     public static ArrayList<Integer>[] node;
     public static int[] visit;
@@ -65,11 +67,11 @@ public class Main {
         visit[start_point] = order++;
 
 
-            for ( int j = 0 ; j < node[start_point].size() ; j++ ){
-                if ( visit[ node[start_point].get(j) ] == 0 ){
-                    dfs ( node[start_point].get(j) );
-                }
+        for ( int j = 0 ; j < node[start_point].size() ; j++ ){
+            if ( visit[ node[start_point].get(j) ] == 0 ){
+                dfs ( node[start_point].get(j) );
             }
+        }
 
 
     }
