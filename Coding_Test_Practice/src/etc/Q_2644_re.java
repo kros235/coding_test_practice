@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_2644_re {
 
 
     public static String[] node;
@@ -71,4 +72,5 @@ public class Main {
             }
         }
     }
+
 }
