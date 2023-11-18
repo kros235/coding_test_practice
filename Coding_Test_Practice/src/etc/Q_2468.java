@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_2468 {
 
     public static int[][] map;
     public static int safe_zone_count;
@@ -73,5 +74,4 @@ public class Main {
         if ( col-1 >= 0 && map[row][col-1] > rain && visit[row][col-1] == false )
             dfs( row, col-1, rain );
     }
-
 }
