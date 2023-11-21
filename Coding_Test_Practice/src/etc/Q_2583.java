@@ -1,8 +1,13 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_2583 {
 
     public static int[][] map;
     public static boolean[][] visit;
@@ -83,4 +88,5 @@ public class Main {
 
         return area_count;
     }
+
 }
