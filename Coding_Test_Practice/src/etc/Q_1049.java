@@ -1,10 +1,13 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1049 {
 
     public static void main(String args[]) throws IOException {
+
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -39,7 +42,7 @@ public class Main {
         int single_price    =   broken_line  * single_min;
 
         int combi_price     =   pacakage_min * (int)( broken_line / 6.0 )
-                            +   ( broken_line - (int)( broken_line / 6.0 ) * 6 ) * single_min;
+                +   ( broken_line - (int)( broken_line / 6.0 ) * 6 ) * single_min;
 
         int[] prices        =   new int[3];
         prices[0]           =   package_price;
@@ -55,6 +58,5 @@ public class Main {
         br.close();
         bw.close();
     }
-
 
 }
