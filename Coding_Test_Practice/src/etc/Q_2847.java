@@ -1,8 +1,9 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
 
-public class Main {
+public class Q_2847 {
 
     public static void main(String args[]) throws IOException {
 
@@ -33,7 +34,7 @@ public class Main {
         bw.write(sb.toString());
         br.close();
         bw.close();
-    }
 
+    }
 
 }
