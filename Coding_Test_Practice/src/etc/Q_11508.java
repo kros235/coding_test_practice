@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
-public class Main {
+public class Q_11508 {
+
 
     public static void main(String args[]) throws IOException {
 
@@ -36,6 +39,4 @@ public class Main {
         br.close();
         bw.close();
     }
-
-
 }
