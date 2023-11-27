@@ -1,8 +1,13 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_1966 {
 
     public static void main(String args[]) throws IOException {
 
@@ -20,10 +25,10 @@ public class Main {
             String target_name = "";
 
             //  create doc names
-            document[] docs = new document[doc_count];
+            Main.document[] docs = new Main.document[doc_count];
             for (int i = 0; i < doc_count; i++) {
                 String name = String.valueOf((char) (65 + i));
-                docs[i] = new document(name, 0);
+                docs[i] = new Main.document(name, 0);
                 if (i == target)
                     target_name = name;
             }
@@ -36,7 +41,7 @@ public class Main {
             }
 
             // put docs in deque
-            Deque<document> deque = new ArrayDeque<>();
+            Deque<Main.document> deque = new ArrayDeque<>();
             for (int i = 0; i < doc_count; i++)
                 deque.add(docs[i]);
 
@@ -46,7 +51,7 @@ public class Main {
 
                 int max_priority = get_max_priority(deque, deque.size()) ;
 
-                document doc = deque.pollFirst();
+                Main.document doc = deque.pollFirst();
                 String doc_name = doc.get_name();
                 int doc_priority = doc.get_priority();
 
@@ -69,12 +74,12 @@ public class Main {
         bw.close();
     }
 
-    public static int get_max_priority( Deque< document > deque, int doc_count ){
+    public static int get_max_priority(Deque<Main.document> deque, int doc_count ){
         int max_priority    =   -1;
 
         //while ( !deque.isEmpty() ){
         for ( int i = 0 ; i < doc_count ; i++ ){
-            document doc    =   deque.pollFirst();
+            Main.document doc    =   deque.pollFirst();
             int current_priority    =   doc.get_priority();
             if ( current_priority > max_priority )
                 max_priority =   current_priority;
@@ -103,4 +108,5 @@ public class Main {
             this.priority = priority;
         }
     }
+
 }
