@@ -25,10 +25,10 @@ public class Q_1966 {
             String target_name = "";
 
             //  create doc names
-            Main.document[] docs = new Main.document[doc_count];
+            document[] docs = new document[doc_count];
             for (int i = 0; i < doc_count; i++) {
                 String name = String.valueOf((char) (65 + i));
-                docs[i] = new Main.document(name, 0);
+                docs[i] = new document(name, 0);
                 if (i == target)
                     target_name = name;
             }
@@ -41,7 +41,7 @@ public class Q_1966 {
             }
 
             // put docs in deque
-            Deque<Main.document> deque = new ArrayDeque<>();
+            Deque<document> deque = new ArrayDeque<>();
             for (int i = 0; i < doc_count; i++)
                 deque.add(docs[i]);
 
@@ -51,7 +51,7 @@ public class Q_1966 {
 
                 int max_priority = get_max_priority(deque, deque.size()) ;
 
-                Main.document doc = deque.pollFirst();
+                document doc = deque.pollFirst();
                 String doc_name = doc.get_name();
                 int doc_priority = doc.get_priority();
 
@@ -74,12 +74,12 @@ public class Q_1966 {
         bw.close();
     }
 
-    public static int get_max_priority(Deque<Main.document> deque, int doc_count ){
+    public static int get_max_priority(Deque<document> deque, int doc_count ){
         int max_priority    =   -1;
 
         //while ( !deque.isEmpty() ){
         for ( int i = 0 ; i < doc_count ; i++ ){
-            Main.document doc    =   deque.pollFirst();
+            document doc    =   deque.pollFirst();
             int current_priority    =   doc.get_priority();
             if ( current_priority > max_priority )
                 max_priority =   current_priority;
