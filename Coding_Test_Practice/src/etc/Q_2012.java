@@ -1,8 +1,13 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
-public class Main {
+public class Q_2012 {
+
 
     public static void main(String args[]) throws IOException {
 
@@ -28,6 +33,5 @@ public class Main {
         br.close();
         bw.close();
     }
-
 
 }
