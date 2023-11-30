@@ -1,11 +1,12 @@
+package etc;
 
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Q_1260 {
 
     public static Queue<Integer> queue    =   new LinkedList<>();
-    public static ArrayList< ArrayList<Integer> > adjNode   =   new ArrayList<>();
+    public static ArrayList<ArrayList<Integer>> adjNode   =   new ArrayList<>();
     public static boolean[] visit;
     public static void main(String args[]) throws IOException {
 
@@ -81,6 +82,4 @@ public class Main {
 
         return result;
     }
-
-
 }
