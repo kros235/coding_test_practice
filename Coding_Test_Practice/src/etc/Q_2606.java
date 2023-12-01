@@ -45,6 +45,31 @@ public class Q_2606 {
         bw.close();
     }
 
+    private static boolean[] bfs(int start_node, ArrayList<ArrayList<Integer>> link, boolean[] visit_checker) {
+
+        for ( int i = 0 ; i < link.size() ; i++ )
+            Collections.sort ( link.get(i) );
+
+        Queue<Integer> queue    =   new LinkedList<>();
+
+        queue.add( start_node );
+
+
+        while ( !queue.isEmpty() ){
+
+            int current_node    =   queue.poll();
+            visit_checker[ current_node - 1 ] =   true;
+
+            for ( int i = 0 ; i < link.get( current_node - 1 ).size() ; i++ ) {
+                int linked_node =   link.get( current_node - 1 ). get(i);
+                if ( visit_checker[linked_node-1] == false )
+                    queue.add(linked_node);
+            }
+        }
+
+        return visit_checker;
+    }
+
     private static boolean[] dfs(int start_node, ArrayList<ArrayList<Integer>> link, boolean[] visit_checker) {
 
         Stack<Integer> stack    =   new Stack<>();
@@ -64,25 +89,4 @@ public class Q_2606 {
         }
         return visit_checker;
     }
-
-    private static boolean[] bfs(int start_node, ArrayList<ArrayList<Integer>> link, boolean[] visit_checker) {
-
-        Queue<Integer> queue    =   new LinkedList<>();
-        queue.add( start_node );
-        visit_checker [ start_node-1 ] = true;
-
-
-        while( !queue.isEmpty() ){
-            start_node = queue.poll();
-            //System.out.println( start_node + " -> ");
-            for ( int i = 0 ; i < link.get(start_node-1).size() ; i++ ){
-                if ( visit_checker [ link.get(start_node-1).get(i)-1 ] != true ) {
-                    queue.add(link.get(start_node - 1).get(i));
-                    visit_checker [ link.get(start_node-1).get(i)-1 ] = true;
-                }
-            }
-        }
-        return visit_checker;
-    }
-
 }

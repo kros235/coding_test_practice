@@ -7,30 +7,87 @@ public class Main {
 
     public static void main(String args[]) throws IOException {
 
-        BufferedReader br           =   new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw           =   new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb            =   new StringBuilder();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
 
-        int lines                   =   Integer.parseInt( br.readLine() );
-        ArrayList<Integer> length        =   new ArrayList<>();
+        int node_count  =   Integer.parseInt( br.readLine() );
+        int link_count  =   Integer.parseInt( br.readLine() );
+        boolean[] visit_checker =   new boolean[ node_count ];
+        Arrays.fill( visit_checker, false);
 
-        for ( int i = 0 ; i < lines ; i++ )
-            length.add( Integer.parseInt( br.readLine() ) );
+        ArrayList<ArrayList<Integer>> link    =   new ArrayList<>();
+        for ( int i = 0 ; i < node_count ; i++ )
+            link.add( new ArrayList<>() );
 
-        Collections.sort ( length, Collections.reverseOrder() );
-
-        int sum =   -1;
-        for ( int i = 0 ; i < length.size()-2 ; i++ ){
-            if ( length.get(i) < length.get(i+1) + length.get(i+2) ){
-                sum     =  length.get(i) + length.get(i+1) + length.get(i+2);
-                break;
-            }
+        for ( int i = 0 ; i < link_count ; i++ ){
+            StringTokenizer st  =   new StringTokenizer( br.readLine() );
+            int start_point     =   Integer.parseInt( st.nextToken() );
+            int end_point       =   Integer.parseInt( st.nextToken() );
+            link.get( start_point-1 ).add( end_point );
+            link.get( end_point-1 ).add( start_point );
         }
 
-        sb.append( sum + "\n");
-        bw.write(sb.toString());
+
+
+        //visit_checker   =   dfs ( 1, link, visit_checker );
+        visit_checker   =   bfs ( 1, link, visit_checker );
+
+        int affected_one    =   0;
+        for ( int i = 0 ; i < visit_checker.length ; i++ )
+            if ( visit_checker[i] == true )
+                affected_one++;
+
+        sb.append( affected_one-1 );
+        bw.write(String.valueOf(sb));
         bw.flush();
         br.close();
         bw.close();
     }
+
+    private static boolean[] bfs(int start_node, ArrayList<ArrayList<Integer>> link, boolean[] visit_checker) {
+
+        for ( int i = 0 ; i < link.size() ; i++ )
+            Collections.sort ( link.get(i) );
+
+        Queue<Integer> queue    =   new LinkedList<>();
+
+        queue.add( start_node );
+
+
+        while ( !queue.isEmpty() ){
+
+            int current_node    =   queue.poll();
+            visit_checker[ current_node - 1 ] =   true;
+
+            for ( int i = 0 ; i < link.get( current_node - 1 ).size() ; i++ ) {
+                int linked_node =   link.get( current_node - 1 ). get(i);
+                if ( visit_checker[linked_node-1] == false )
+                    queue.add(linked_node);
+            }
+        }
+
+        return visit_checker;
+    }
+
+    private static boolean[] dfs(int start_node, ArrayList<ArrayList<Integer>> link, boolean[] visit_checker) {
+
+        Stack<Integer> stack    =   new Stack<>();
+        stack.push( start_node );
+        visit_checker [ start_node-1 ] = true;
+
+
+        while( !stack.isEmpty() ){
+            start_node = stack.pop();
+            //System.out.println( start_node + " -> ");
+            for ( int i = 0 ; i < link.get(start_node-1).size() ; i++ ){
+                if ( visit_checker [ link.get(start_node-1).get(i)-1 ] != true ) {
+                    stack.push(link.get(start_node - 1).get(i));
+                    visit_checker [ link.get(start_node-1).get(i)-1 ] = true;
+                }
+            }
+        }
+        return visit_checker;
+    }
+
 }
