@@ -1,8 +1,11 @@
+package etc;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.StringTokenizer;
 
-public class Main {
+public class Q_20300 {
 
 
     public static void main(String args[]) throws IOException {
