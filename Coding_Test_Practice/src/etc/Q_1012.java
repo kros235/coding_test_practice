@@ -1,6 +1,8 @@
 package etc;
 
 import java.io.*;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Q_1012 {
@@ -39,7 +41,8 @@ public class Q_1012 {
                     if (field[i][j] == 1 && visit[i][j] == false) {
                         worm_count++;
                         visit[i][j] = true;
-                        dfs(i, j);
+                        //dfs(i, j);
+                        bfs( i , j );
                     }
                 }
             }
@@ -49,6 +52,37 @@ public class Q_1012 {
         bw.write(sb.toString());
         br.close();
         bw.close();
+    }
+
+    public static void bfs ( int i, int j ){
+        Queue<int[]> queue   =   new LinkedList<>();
+        queue.offer ( new int[] { i, j } );
+        //        위 아래  좌  우
+        int[] X = {0, 0, -1, +1};
+        int[] Y = {-1, +1, 0, 0};
+
+        while ( !queue.isEmpty() ){
+            int[] poll  =   queue.poll();
+
+            for ( int m = 0 ; m < 4 ; m++ ){
+                int x   =   poll[0] + X[m];
+                int y   =   poll[1] + Y[m];
+
+               //좌표가 배추밭을 벗어나게되면 다음 좌표를 체크해야한다
+                if(x < 0 || x >= field.length || y < 0 || y >= field[0].length ){
+                    continue;
+                }
+
+                //상하좌우 움직인 좌표에 배추가 있고, 체크하지 않은 좌표이면
+                if(field[x][y] == 1 & !visit[x][y]){
+                    queue.offer(new int[] {x, y});
+                    //좌표를 저장한다.
+                    visit[x][y] = true;
+                    //체크한다
+                }
+
+            }
+        }
     }
 
     public static void dfs ( int i, int j ){
