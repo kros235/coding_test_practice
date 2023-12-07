@@ -1,9 +1,9 @@
+package etc;
 
 import java.io.*;
 import java.util.*;
 
-public class Main {
-
+public class Q_11724_re {
 
     public static int chunk_count = 0;
     public static ArrayList<ArrayList<Integer>> links   =   new ArrayList<>();
@@ -75,5 +75,6 @@ public class Main {
                 continue;
         }
     }
+
 
 }
