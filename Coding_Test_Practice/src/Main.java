@@ -1,79 +1,133 @@
 
+
+
 import java.io.*;
 import java.util.*;
 
 public class Main {
 
 
-    public static int chunk_count = 0;
-    public static ArrayList<ArrayList<Integer>> links   =   new ArrayList<>();
-    public static boolean[] visit_checker;
+    public static int[][] map;
+    public static boolean[][] visit;
+    public static int row, col;
+
     public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
 
-        StringTokenizer st  =   new StringTokenizer( br.readLine() );
-        int node_count  =   Integer.parseInt( st.nextToken() );
-        int link_count  =   Integer.parseInt( st.nextToken() );
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            col = Integer.parseInt(st.nextToken());
+            row = Integer.parseInt(st.nextToken());
 
-        visit_checker   =   new boolean[node_count+1];
-        visit_checker[0]=   true;
+            if (row == 0 && col == 0)
+                break;
+            else {
+                int island_count = 0;
 
-        for ( int i = 0 ; i < node_count+1 ; i++ )
-            links.add ( new ArrayList<>() );
+                map = new int[row][col];
+                visit = new boolean[row][col];
 
-        for ( int i = 0 ; i < link_count ; i++ ){
-            st  =   new StringTokenizer( br.readLine() );
-            int start_node  =   Integer.parseInt( st.nextToken() );
-            int end_node    =   Integer.parseInt( st.nextToken() );
-            links.get( start_node ).add( end_node );
-            links.get( end_node ).add( start_node );
-        }
+                for (int i = 0; i < row; i++) {
+                    st = new StringTokenizer(br.readLine());
+                    for (int j = 0; j < col; j++) {
+                        map[i][j] = Integer.parseInt(st.nextToken());
+                    }
+                }
 
-        for ( int i = 1 ; i < links.size() ; i++ ){
-            if ( visit_checker[i] == false ){
-                chunk_count++;
-                //dfs( i );
-                bfs ( i );
+                for (int i = 0; i < row; i++) {
+                    for (int j = 0; j < col; j++) {
+                        if (map[i][j] == 1 && visit[i][j] == false) {
+                            island_count++;
+                            //dfs(i, j);
+                            bfs(i, j);
+                        }
+                    }
+                }
+                sb.append(island_count + "\n");
             }
-            else continue;
         }
-
-        sb.append( chunk_count );
-        bw.write(String.valueOf(sb));
-        bw.flush();
+        bw.write(sb.toString());
         br.close();
         bw.close();
     }
 
-    private static void bfs(int start_node) {
-        Queue< Integer > queue  =   new LinkedList<>();
-        queue.offer ( start_node );
+    private static void bfs(int row, int col) {
+        int[] row_direction = new int[]{-1, 1, 0, 0,        -1, -1, 1, 1 };
+        int[] col_direction = new int[]{0, 0, -1, 1,        -1, 1, -1, 1};
 
-        while ( !queue.isEmpty() ){
-            int node    =   queue.poll();
-            visit_checker[ node ]   =   true;
-            for ( int i = 0 ; i < links.get(node).size() ; i++ ){
-                int result  =   links.get(node).get(i);
-                if ( visit_checker [ result ] == false ) {
-                    queue.offer(result);
-                    visit_checker[result] = true;
-                }
-                else continue;
+        Queue<land> queue = new LinkedList<>();
+        queue.offer(new land(row, col));
+
+
+        while (!queue.isEmpty()) {
+            land current_land = queue.poll();
+            visit[current_land.get_row()][current_land.get_col()] = true;
+
+            for (int i = 0; i < 8; i++) {
+                if (current_land.get_row() + row_direction[i] >= 0
+                        && current_land.get_row() + row_direction[i] < map.length
+                        && current_land.get_col() + col_direction[i] >= 0
+                        && current_land.get_col() + col_direction[i] < map[0].length) {
+
+                    if (visit[current_land.get_row() + row_direction[i]][current_land.get_col() + col_direction[i]] == false
+                            && map[current_land.get_row() + row_direction[i]][current_land.get_col() + col_direction[i]] == 1) {
+                        queue.offer(new land(current_land.get_row() + row_direction[i], current_land.get_col() + col_direction[i]));
+                        visit[current_land.get_row() + row_direction[i]][current_land.get_col() + col_direction[i]] = true;
+                    }
+                } else
+                    continue;
             }
+        }
+
+
+    }
+
+    public static class land {
+        int row;
+        int col;
+
+        public land(int row, int col) {
+            this.row = row;
+            this.col = col;
+        }
+
+        public int get_row() {
+            return row;
+        }
+
+        public int get_col() {
+            return col;
         }
     }
 
-    private static void dfs(int start_node) {
-        visit_checker[ start_node ] = true;
-        for ( int i = 0 ; i < links.get( start_node ).size() ; i++ ){
-            if ( visit_checker[ links.get(start_node).get(i) ] == false )
-                dfs ( links.get(start_node).get(i) );
-            else
-                continue;
-        }
+    public static void dfs(int row, int col) {
+        visit[row][col] = true;
+        if (row - 1 >= 0 && col - 1 >= 0 && map[row - 1][col - 1] == 1 && visit[row - 1][col - 1] == false)
+            dfs(row - 1, col - 1);
+
+        if (row - 1 >= 0 && map[row - 1][col] == 1 && visit[row - 1][col] == false)
+            dfs(row - 1, col);
+
+        if (row - 1 >= 0 && col + 1 < map[0].length && map[row - 1][col + 1] == 1 && visit[row - 1][col + 1] == false)
+            dfs(row - 1, col + 1);
+
+        if (col - 1 >= 0 && map[row][col - 1] == 1 && visit[row][col - 1] == false)
+            dfs(row, col - 1);
+
+        if (col + 1 < map[0].length && map[row][col + 1] == 1 && visit[row][col + 1] == false)
+            dfs(row, col + 1);
+
+        if (row + 1 < map.length && col - 1 >= 0 && map[row + 1][col - 1] == 1 && visit[row + 1][col - 1] == false)
+            dfs(row + 1, col - 1);
+
+        if (row + 1 < map.length && map[row + 1][col] == 1 && visit[row + 1][col] == false)
+            dfs(row + 1, col);
+
+        if (row + 1 < map.length && col + 1 < map[0].length && map[row + 1][col + 1] == 1 && visit[row + 1][col + 1] == false)
+            dfs(row + 1, col + 1);
     }
 
 }
